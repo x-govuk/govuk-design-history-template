@@ -1,4 +1,14 @@
 @import "govuk/all.scss";
 @import "../_components/all.scss";
 @import "vendor/prism.scss";
-@import "bat-design-history.scss";
+
+@include govuk-media-query($media-type: print) {
+  .app-\!-print-display-none {
+    display: none !important;
+  }
+
+  // Force a white background when printing a page
+  .govuk-template {
+    background: #fff;
+  }
+}
