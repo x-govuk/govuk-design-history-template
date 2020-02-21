@@ -1,0 +1,43 @@
+{%- macro _actionLink(action) %}
+  <a class="govuk-link {%- if action.classes %} {{ action.classes }}{% endif %}" href="{{ action.href }}" {%- for attribute, value in action.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+    {{ action.html | safe if action.html else action.text }}
+    {%- if action.visuallyHiddenText -%}
+      <span class="govuk-visually-hidden"> {{ action.visuallyHiddenText }}</span>
+    {% endif -%}
+  </a>
+{% endmacro -%}
+
+<section class="app-summary-card
+  {%- if params.classes %} {{ params.classes }}{% endif %}"
+  {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+  {% if params.titleHtml or params.titleText or params.actions %}
+  <header class="app-summary-card__header">
+    {% set headingLevel = params.headingLevel if params.headingLevel else 2 %}
+    <h{{ headingLevel }} class="app-summary-card__title">
+      {{ params.titleHtml | safe if params.titleHtml else params.titleText }}
+    </h{{ headingLevel }}>
+    {% if params.actions.items.length %}
+      <div class="app-summary-card__actions  app-!-print-display-none">
+        {% if params.actions.items.length == 1 %}
+          {{ _actionLink(params.actions.items[0]) | indent(12) | trim }}
+        {% else %}
+          <ul class="app-summary-card__actions-list">
+          {% for action in params.actions.items %}
+            {% if action %}
+              <li class="app-summary-card__actions-list-item">
+                {{ _actionLink(action) | indent(18) | trim }}
+              </li>
+            {% endif %}
+          {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    {% endif %}
+  </header>
+  {% endif %}
+  {% if params.html or params.text %}
+  <div class="app-summary-card__body">
+    {{ params.html | safe if params.html else params.text }}
+  </div>
+  {% endif %}
+</section>

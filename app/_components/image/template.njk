@@ -1,0 +1,4 @@
+{% set path = params.path if params.path else page.filePathStem | replace("/posts", "/images") %}
+<a href="{{ path }}/{{ params.file }}">
+  <img src="{{ path }}/{{ params.file }}" alt="{{ params.alt }}">
+</a>

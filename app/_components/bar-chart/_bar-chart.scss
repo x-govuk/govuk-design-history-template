@@ -1,0 +1,19 @@
+.app-bar-chart {
+  [style^="--chart-width"] {
+    padding-left: govuk-spacing(1);
+    position: relative;
+  }
+
+  [style^="--chart-width"]::before {
+    background-color: govuk-colour("yellow");
+    mix-blend-mode: multiply;
+    content: "";
+    display: block;
+    position: absolute;
+    width: var(--chart-width);
+    left: 0;
+    right: 0;
+    top: govuk-spacing(1);
+    bottom: govuk-spacing(1);
+  }
+}

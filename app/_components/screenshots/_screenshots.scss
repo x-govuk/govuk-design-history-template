@@ -1,0 +1,22 @@
+.app-screenshots__contents,
+.app-screenshots__screenshot {
+  margin-bottom: govuk-spacing(9);
+}
+
+@include govuk-media-query($media-type: print) {
+  // Separate screenshots from surrounding content
+  .app-screenshots {
+    page-break-before: always;
+    page-break-after: always;
+  }
+
+  .app-screenshots__screenshot {
+    // New page per screenshot
+    page-break-before: always;
+
+    // Hide image URLs
+    a:after {
+      display: none;
+    }
+  }
+}

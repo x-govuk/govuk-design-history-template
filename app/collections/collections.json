@@ -1,0 +1,7 @@
+{
+  "layout": "collection",
+  "permalink": "{{ page.filePathStem | replace('collections/', '') }}/index.html",
+  "tags": [
+    "product"
+  ]
+}

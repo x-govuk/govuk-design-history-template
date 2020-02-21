@@ -1,0 +1,196 @@
+.app-prose {
+  @include govuk-font($size: false);
+
+  > h1 {
+    @extend %govuk-heading-xl;
+    max-width: 40rem;
+  }
+
+  > h2 {
+    @extend %govuk-heading-l;
+    max-width: 40rem;
+  }
+
+  > h3 {
+    @extend %govuk-heading-m;
+    max-width: 40rem;
+  }
+
+  > h4 {
+    @extend %govuk-heading-s;
+    max-width: 40rem;
+  }
+
+  > h5 {
+    @include govuk-font($size: 19);
+    @include govuk-responsive-margin(4, "bottom");
+    margin-top: 0;
+    color: $govuk-secondary-text-colour;
+  }
+
+  > h6 {
+    @include govuk-font($size: 16);
+    @include govuk-responsive-margin(4, "bottom");
+    margin-top: 0;
+    color: $govuk-secondary-text-colour;
+  }
+
+  > p,
+  > dl,
+  > blockquote p {
+    @extend %govuk-body-m;
+    max-width: 40rem;
+  }
+
+  > blockquote {
+    @extend .govuk-inset-text;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  abbr {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+
+  strong,
+  b,
+  dt {
+    @include govuk-typography-weight-bold;
+  }
+
+  dd + dt {
+    margin-top: govuk-spacing(4);
+  }
+
+  dd {
+    margin-left: 0;
+  }
+
+  > ol {
+    @extend %govuk-list;
+    @extend %govuk-list--number;
+    max-width: 40rem;
+  }
+
+  > ul:not([class]),
+  .table-of-contents ul {
+    @extend %govuk-list;
+    @extend %govuk-list--bullet;
+    max-width: 40rem;
+  }
+
+  a:not([class]) {
+    @extend %govuk-link;
+  }
+
+  mark {
+    background-color: govuk-colour("yellow");
+  }
+
+  hr {
+    @extend %govuk-section-break;
+    @extend %govuk-section-break--visible;
+    @extend %govuk-section-break--xl;
+  }
+
+  table {
+    @extend .govuk-table;
+    @include govuk-responsive-margin(8, "bottom");
+    @include govuk-responsive-margin(8, "top");
+
+    tr {
+      @extend .govuk-table__row !optional;
+    }
+
+    tbody {
+      @extend .govuk-table__body !optional;
+    }
+
+    thead {
+      @extend .govuk-table__head !optional;
+    }
+
+    th {
+      @extend .govuk-table__header;
+      padding: govuk-spacing(2);
+    }
+
+    td {
+      @extend .govuk-table__cell;
+      padding: govuk-spacing(2);
+    }
+
+    td *:first-child {
+      margin-top: 0;
+    }
+
+    td *:last-child {
+      margin-bottom: 0;
+    }
+
+    th:first-child,
+    td:first-child {
+      padding-left: 0;
+    }
+  }
+
+  pre,
+  code {
+    background-color: govuk-colour("light-grey");
+    font-family: monospace, monospace;
+    font-size: 0.875em;
+  }
+
+  pre {
+    padding: govuk-spacing(4);
+    overflow: scroll;
+  }
+
+  pre + h2 {
+    padding-top: govuk-spacing(4);
+  }
+
+  pre + h3,
+  pre + h4 {
+    padding-top: govuk-spacing(2);
+  }
+
+  img {
+    @include govuk-responsive-margin(4, "bottom");
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    outline: 1px solid rgba($govuk-border-colour, 0.5);
+    outline-offset: -1px;
+  }
+
+  .footnote-backref {
+    text-decoration: none;
+  }
+
+  .header-anchor {
+    text-decoration: none;
+    font-style: italic;
+    font-weight: normal;
+    color: govuk-colour("mid-grey");
+    margin-right: 0.1em;
+
+    @media (min-width: 1050px) {
+      position: absolute;
+      margin-left: -1em;
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $govuk-link-hover-colour;
+    }
+  }
+
+  .table-of-contents {
+    > ul > li {
+      font-weight: bold;
+    }
+  }
+}

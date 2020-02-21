@@ -1,0 +1,33 @@
+{%- from "../figure/macro.njk" import appFigure with context -%}
+<section class="app-screenshots app-prose govuk-!-margin-top-9" id="screenshots">
+  {% if not params.hideContents %}
+    <h2 class="govuk-heading-l app-!-print-display-none">
+      <a class="header-anchor" href="#screenshots">#</a>
+      Screenshots
+    </h2>
+    <ul class="govuk-list app-screenshots__contents app-!-print-display-none">
+      {% for item in params.items %}
+        <li>
+          <a href="#{{ item.id or (item.text | slug) }}">{{ item.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% for item in params.items -%}
+  {%- set id = item.id or (item.text | slug) -%}
+  {%- set file = item.img.src or (id + ".png") -%}
+  {%- set alt = item.img.alt or ("Screenshot of " + item.text) -%}
+  <div class="app-screenshots__screenshot" id="{{ id }}">
+    {{ appFigure({
+      id: id,
+      image: {
+        path: params.path or item.img.path,
+        file: file,
+        alt: alt
+      },
+      title: item.text,
+      caption: item.caption
+    }) }}
+  </div>
+{%- endfor %}
+</section>

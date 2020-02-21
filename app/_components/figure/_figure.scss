@@ -1,0 +1,40 @@
+.app-figure {
+  margin: 0;
+  @include govuk-responsive-margin(8, "bottom");
+
+  > a {
+    display: block;
+    outline: 1px solid rgba($govuk-border-colour, 0.5);
+
+    &:hover {
+      outline-color: $govuk-link-hover-colour;
+    }
+
+    &:active {
+      outline-color: $govuk-link-active-colour;
+    }
+  }
+
+  a img {
+    outline: 0;
+  }
+
+  .app-figure__caption {
+    @include govuk-responsive-margin(4, "top");
+    @include govuk-font($size: 19);
+
+    h3 {
+      @extend %govuk-heading-s;
+    }
+
+    hr {
+      @extend %govuk-section-break--m;
+    }
+  }
+
+  figcaption {
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}

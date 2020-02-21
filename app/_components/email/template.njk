@@ -1,0 +1,6 @@
+<div class="app-email{%- if params.classes %} {{ params.classes }}{% endif %}">
+{%- if params.subject -%}
+  <h3 class="app-email__subject">{{- params.subject | safe if params.subject -}}</h3>
+{%- endif %}
+{{- params.content | markdown | safe if params.content -}}
+</div>

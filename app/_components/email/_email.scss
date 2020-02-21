@@ -1,0 +1,52 @@
+.app-email {
+  @include govuk-font($size: false);
+  border: $govuk-border-width solid $govuk-border-colour;
+  padding: govuk-spacing(4);
+  margin-bottom: govuk-spacing(8);
+  max-width: 40rem;
+
+  h1 {
+    @extend %govuk-heading-xl;
+  }
+
+  h2 {
+    @extend %govuk-heading-l;
+  }
+
+  h3 {
+    @extend %govuk-heading-m;
+  }
+
+  p {
+    @extend %govuk-body-m;
+  }
+
+  ol {
+    @extend %govuk-list;
+    @extend %govuk-list--number;
+  }
+
+  ul {
+    @extend %govuk-list;
+    @extend %govuk-list--bullet;
+  }
+
+  a {
+    @extend %govuk-link;
+  }
+
+  // Used when showing screenshots of HTML email
+  img:first-of-type {
+    margin: - govuk-spacing(4);
+    width: calc(100% + #{govuk-spacing(4) + govuk-spacing(4)});
+    max-width: none;
+    outline: 0;
+  }
+}
+
+.app-email__subject {
+  padding-bottom: govuk-spacing(4);
+  margin-top: 0;
+  margin-bottom: govuk-spacing(4);
+  border-bottom: 1px solid $govuk-border-colour;
+}
