@@ -1,5 +1,6 @@
-# Design history for becoming a teacher
+# Design history for GOV.UK services
 
+An example design history from the Becoming a teacher team:
 https://bat-design-history.netlify.com
 
 ## Purpose of this project
@@ -38,10 +39,3 @@ This will automatically restart the application with changes to the CSS, JavaScr
 ## Technical notes
 
 The design history uses the [GOV.UK Design System](https://design-system.service.gov.uk) and the [Eleventy](https://www.11ty.io) static site generator.
-
-## Legacy
-
-This design history replaces an earlier version based on the govuk-prototype-kit:
-
-* https://github.com/DFE-Digital/bat-design-history-old
-* https://bat-design-history-old.herokuapp.com/

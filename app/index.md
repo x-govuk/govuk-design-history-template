@@ -1,7 +1,7 @@
 ---
 layout: collection
-title: "Design history"
-description: "A place for you to document your GOV.UK service designs"
+title: "A design history for your GOV.UK service"
+description: "Set up a place for you to document designs for your service"
 breadcrumbs: false
 pagination:
   data: collections.all
