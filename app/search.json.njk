@@ -1,13 +1,14 @@
 ---
 permalink: /search.json
+eleventyExcludeFromCollections: true
 ---
 [{% for item in collections["search-index"] %}
   {
     "data": {
-      "title": {{ item.data.title | dump | safe }},
-      {% if item.data.description %}"description": {{ item.data.description | dump | safe }},{% endif %}
-      "section": {{ item.data.breadcrumbs[0].text | dump | safe }},
-      "layout": {{ item.data.layout | dump | safe }}
+      "title": {{ item.data.title | dump | safe }}
+      {% if item.data.description %},
+      "description": {{ item.data.description | dump | safe }}
+      {% endif %}
     },
     "date": {{ item.date | date | dump | safe }},
     "dateString": {{ item.date  | date("d LLLL y") | dump | safe }},

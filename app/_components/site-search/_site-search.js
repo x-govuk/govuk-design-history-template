@@ -86,7 +86,7 @@ Search.prototype.resultTemplate = function (result) {
 
     var section = document.createElement('span')
     section.className = 'app-site-search--section'
-    section.innerHTML = result.data.section + '<br>' + result.dateString
+    section.innerHTML = result.dateString
 
     elem.appendChild(section)
     return elem.innerHTML
