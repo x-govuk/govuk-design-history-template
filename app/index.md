@@ -9,3 +9,16 @@ pagination:
   size: 50
 eleventyExcludeFromCollections: true
 ---
+
+## Getting started
+
+This project makes it easy to:
+
+* create pages of screenshots to document designs
+* document designs using the [GOV.UK Design System](https://design-system.service.gov.uk/)
+* print pages of designs
+* make designs shareable and linkable
+
+Follow the guides below to begin a design history for your GOV.UK service.
+
+---
