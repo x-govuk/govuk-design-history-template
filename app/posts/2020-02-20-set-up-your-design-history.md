@@ -6,6 +6,8 @@ related:
   items:
   - text: Repository
     href: https://github.com/fofr/govuk-design-history
+  - text: 11ty docs
+    href: https://www.11ty.dev/docs/
 ---
 
 Words
