@@ -28,7 +28,7 @@
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
 {% block footer %}
-  <div class="app-!-print-display-none">
+  <div class="govuk-!-display-none-print">
     {{ govukFooter({
       meta: {
         items: [{

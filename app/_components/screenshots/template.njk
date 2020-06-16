@@ -1,11 +1,11 @@
 {%- from "../figure/macro.njk" import appFigure with context -%}
 <section class="app-screenshots app-prose govuk-!-margin-top-9" id="screenshots">
   {% if not params.hideContents %}
-    <h2 class="govuk-heading-l app-!-print-display-none">
+    <h2 class="govuk-heading-l govuk-!-display-none-print">
       <a class="header-anchor" href="#screenshots">#</a>
       Screenshots
     </h2>
-    <ul class="govuk-list app-screenshots__contents app-!-print-display-none">
+    <ul class="govuk-list app-screenshots__contents govuk-!-display-none-print">
       {% for item in params.items %}
         <li>
           <a href="#{{ item.id or (item.text | slug) }}">{{ item.text }}</a>
