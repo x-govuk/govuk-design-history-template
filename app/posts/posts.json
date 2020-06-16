@@ -1,7 +1,11 @@
 {
   "layout": "post",
-  "permalink": "{{ page.filePathStem | replace('posts/', '') }}.html",
-  "tags": [
-    "search-index"
-  ]
+  "permalink": "{{ page.filePathStem | replace('posts/', '') }}/",
+  "tags": ["search-index"],
+  "eleventyComputed": {
+    "eleventyNavigation": {
+      "parent": "home",
+      "key": "{{ title }}"
+    }
+  }
 }

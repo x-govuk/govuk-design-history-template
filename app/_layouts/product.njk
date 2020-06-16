@@ -7,7 +7,7 @@
 {% from "related/macro.njk" import appRelated %}
 
 {% block main %}
-  {% call appMasthead({
+{% call appMasthead({
     title: {
       classes: "govuk-heading-xl",
       html: titleHtml or title
@@ -18,10 +18,12 @@
     startButton: startButton if startButton,
     image: image if image
   }) %}
-    {{ govukBreadcrumbs({
-      classes: "app-!-print-display-none",
-      items: breadcrumbs | breadcrumbs(app, page, title)
-    }) if breadcrumbs != false }}
+    {{ appBreadcrumbs({
+      classes: "app-breadcrumbs--inverted govuk-!-display-none-print",
+      title: title,
+      items: collections.all,
+      key: eleventyNavigation.key
+    }) if eleventyNavigation and eleventyNavigation.key and eleventyNavigation.parent }}
   {% endcall %}
 
   <div class="govuk-width-container">

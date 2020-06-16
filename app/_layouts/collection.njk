@@ -8,7 +8,7 @@
 {% block main %}
   {% call appMasthead({
     title: {
-      classes: "govuk-heading-xl",
+      classes: "govuk-heading-l",
       html: title
     } if title,
     description: {
@@ -17,10 +17,12 @@
     startButton: startButton if startButton,
     image: image if image
   }) %}
-    {{ govukBreadcrumbs({
-      classes: "app-breadcrumbs--inverted app-!-print-display-none",
-      items: breadcrumbs | breadcrumbs(app, page, title)
-    }) if breadcrumbs != false }}
+    {{ appBreadcrumbs({
+      classes: "app-breadcrumbs--inverted govuk-!-display-none-print",
+      title: title,
+      items: collections.all,
+      key: eleventyNavigation.key
+    }) if eleventyNavigation and eleventyNavigation.key and eleventyNavigation.parent }}
   {% endcall %}
 
   <div class="govuk-width-container">

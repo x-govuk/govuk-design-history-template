@@ -16,10 +16,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary('md', require('./lib/libraries/markdown'));
 
   // Plugins
+  eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
   eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'));
 
   // Filters
-  eleventyConfig.addFilter('breadcrumbs', require('./lib/filters/breadcrumbs'))
   eleventyConfig.addFilter('date', require('./lib/filters/date'))
   eleventyConfig.addFilter('fixed', require('./lib/filters/fixed'))
   eleventyConfig.addFilter('includes', require('./lib/filters/includes'))

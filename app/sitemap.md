@@ -1,14 +1,15 @@
 ---
 layout: page
 title: Sitemap
-breadcrumbs: false
 permalink: "/sitemap.html"
 eleventyExcludeFromCollections: true
 ---
-<ul class="govuk-list">
-{% for item in collections.all | sort("data.order") %}
-  <li class="govuk-!-margin-bottom-2">
-    <a href="{{ item.url }}">{{ item.data.title }}</a>
-  </li>
+{% for item in collections.all | eleventyNavigation("home") %}
+  <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
+    <a href="{{ item.url | url | pretty }}">{{ item.title }}</a>
+  </h2>
+  <p class="govuk-body">{{ item.excerpt }}</p>
+  {{ collections.all | eleventyNavigation(item.key) | eleventyNavigationToHtml({
+    listClass: "govuk-list govuk-list--bullet"
+  }) | safe }}
 {% endfor %}
-</ul>
