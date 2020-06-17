@@ -19,6 +19,14 @@ This repository makes it easy to:
 * In Terminal, change the path to the repository
 * Type `npm install` to install the dependencies
 
+### Deploying to Netlify
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/fofr/govuk-design-history)
+
+### Deploying to Heroku
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## Working locally
 
 Most of the time you'll be adding new posts. If you're just doing this then:
