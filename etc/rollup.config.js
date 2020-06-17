@@ -11,4 +11,10 @@ module.exports = [{
     resolve(),
     commonjs()
   ]
+}, {
+  input: 'node_modules/govuk-frontend/govuk/all.js',
+  output: {
+    file: 'public/javascripts/govuk-frontend.js'
+  },
+  context: 'window'
 }]
