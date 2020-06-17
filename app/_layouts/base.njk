@@ -3,7 +3,7 @@
 {% set htmlClasses = 'no-js' %}
 
 {% from "header/macro.njk" import appHeader %}
-{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "breadcrumbs/macro.njk" import appBreadcrumbs %}
 
 {% block head %}
 <!--[if lte IE 8]><link href="/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
@@ -19,16 +19,25 @@
 
 {% block header %}
   {{ appHeader({
-    homepageUrl: app.url or "https://gov.uk",
+    homepageUrl: app.url or "/",
     productName: app.productName,
     serviceName: app.serviceName
   }) }}
 {% endblock %}
 
+{% block beforeContent %}
+  {{ appBreadcrumbs({
+    classes: "govuk-!-display-none-print",
+    title: title,
+    items: collections.all,
+    key: eleventyNavigation.key
+  }) if eleventyNavigation and eleventyNavigation.key and eleventyNavigation.parent }}
+{% endblock %}
+
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
 {% block footer %}
-  <div class="app-!-print-display-none">
+  <div class="govuk-!-display-none-print">
     {{ govukFooter({
       meta: {
         items: [{

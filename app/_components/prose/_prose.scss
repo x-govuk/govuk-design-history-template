@@ -1,34 +1,34 @@
 .app-prose {
   @include govuk-font($size: false);
 
-  > h1 {
+  > h1:not([class]) {
     @extend %govuk-heading-xl;
     max-width: 40rem;
   }
 
-  > h2 {
+  > h2:not([class]) {
     @extend %govuk-heading-l;
     max-width: 40rem;
   }
 
-  > h3 {
+  > h3:not([class]) {
     @extend %govuk-heading-m;
     max-width: 40rem;
   }
 
-  > h4 {
+  > h4:not([class]) {
     @extend %govuk-heading-s;
     max-width: 40rem;
   }
 
-  > h5 {
+  > h5:not([class]) {
     @include govuk-font($size: 19);
     @include govuk-responsive-margin(4, "bottom");
     margin-top: 0;
     color: $govuk-secondary-text-colour;
   }
 
-  > h6 {
+  > h6:not([class]) {
     @include govuk-font($size: 16);
     @include govuk-responsive-margin(4, "bottom");
     margin-top: 0;

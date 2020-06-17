@@ -3,10 +3,6 @@
 @import "vendor/prism.scss";
 
 @include govuk-media-query($media-type: print) {
-  .app-\!-print-display-none {
-    display: none !important;
-  }
-
   // Force a white background when printing a page
   .govuk-template {
     background: #fff;

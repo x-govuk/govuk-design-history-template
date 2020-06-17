@@ -1,4 +1,3 @@
 module.exports = {
-  productName: 'Design history',
-  url: '/'
+  productName: 'Design history'
 }
