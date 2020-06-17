@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
   <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
     <a href="{{ item.url | url | pretty }}">{{ item.title }}</a>
   </h2>
-  <p class="govuk-body">{{ item.excerpt }}</p>
+  {% if item.excerpt %}<p class="govuk-body">{{ item.excerpt }}</p>{% endif %}
   {{ collections.all | eleventyNavigation(item.key) | eleventyNavigationToHtml({
     listClass: "govuk-list govuk-list--bullet"
   }) | safe }}

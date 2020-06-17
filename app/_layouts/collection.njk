@@ -1,18 +1,19 @@
-{% extends "product.njk" %}
+{% extends "base.njk" %}
 
 {% from "document-list/macro.njk" import appDocumentList %}
+{% from "masthead/macro.njk" import appMasthead %}
 {% from "pagination/macro.njk" import appPagination %}
 {% from "prose/macro.njk" import appProse %}
 {% from "related/macro.njk" import appRelated %}
 
 {% block main %}
   {% call appMasthead({
+    classes: "app-masthead--large" if eleventyNavigation.key == "home",
     title: {
-      classes: "govuk-heading-l",
-      html: title
+      html: title | widont
     } if title,
     description: {
-      html: description | markdown
+      html: description | widont | markdown
     } if description,
     startButton: startButton if startButton,
     image: image if image
@@ -33,33 +34,52 @@
         prose: content
       }) }}
       <div class="govuk-grid-row">
-        <section class="govuk-grid-column-two-thirds">
-          <h2 class="govuk-heading-l">Posts</h2>
-          {{ appDocumentList({
-            classes: "govuk-!-margin-bottom-6",
-            items: pagination.items
-          }) }}
-          {{ appPagination({
-            previous: {
-              text: "Previous",
-              href: pagination.href.previous
-            } if pagination.href.previous,
-            next: {
-              text: 'Next',
-              href: pagination.href.next
-            } if pagination.href.next,
-            selected: pagination.pageNumber,
-            items: pagination.hrefs
-          }) }}
-        </section>
-
-        {% if related %}
-        <div class="govuk-grid-column-one-third">
-          {{ appRelated({
-            title: related.title or "Related links",
-            items: related.items
-          }) }}
-        </div>
+        {# Paginate posts if front matter includes the pagination key #}
+        {% if pagination %}
+          <section class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l govuk-!-font-size-27">
+              {{ app.posts.title or "Posts" }}
+            </h2>
+            {{ appDocumentList({
+              classes: "govuk-!-margin-bottom-6",
+              items: pagination.items
+            }) }}
+            {{ appPagination({
+              previous: {
+                text: "Previous",
+                href: pagination.href.previous
+              } if pagination.href.previous,
+              next: {
+                text: 'Next',
+                href: pagination.href.next
+              } if pagination.href.next,
+              selected: pagination.pageNumber,
+              items: pagination.hrefs
+            }) }}
+          </section>
+          {% if related %}
+            <div class="govuk-grid-column-one-third">
+              {{ appRelated({
+                title: related.title or "Related links",
+                items: related.items
+              }) }}
+            </div>
+          {% endif %}
+        {# List sections (pages whose parent is `home`) if homepage with no pagination key set #}
+        {% elif eleventyNavigation.key == "home" %}
+          <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-l govuk-!-font-size-27">
+              {{ app.sections.title or "Sections" }}
+            </h2>
+          </div>
+          {% for item in collections.all | eleventyNavigation("home") %}
+            <section class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
+              <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+                <a href="{{ item.url | url | pretty }}">{{ item.title }}</a>
+              </h3>
+              <p class="govuk-body">{{ item.excerpt }}</p>
+            </section>
+          {% endfor %}
         {% endif %}
       </div>
     {% endblock %}

@@ -6,8 +6,7 @@
 {% block content %}
   {% call appArticle({
     header: {
-      title: title,
-      description: description
+      title: title | widont
     }
   }) %}
   {{ appProse({

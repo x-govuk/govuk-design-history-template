@@ -29,6 +29,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('sort', require('./lib/filters/sort'))
   eleventyConfig.addFilter('tokenize', require('./lib/filters/tokenize'))
   eleventyConfig.addFilter('totalFromRows', require('./lib/filters/total-from-rows'))
+  eleventyConfig.addFilter('widont', require('./lib/filters/widont'))
 
   // Transforms
 

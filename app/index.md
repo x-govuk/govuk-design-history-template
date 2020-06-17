@@ -1,5 +1,5 @@
 ---
-layout: product
+layout: collection
 title: "A design history for your GOV.UK service"
 description: "Set up a place for you to document designs for your service"
 pagination:

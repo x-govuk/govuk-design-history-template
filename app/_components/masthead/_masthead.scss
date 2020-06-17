@@ -6,15 +6,24 @@
   margin-top: #{govuk-spacing(2) * -1};
 }
 
-.app-masthead__title {
-  color: govuk-colour("white");
+.app-masthead * {
+  color: inherit;
 }
 
-.app-masthead__description {
-  @include govuk-font(24);
+.app-masthead__title {
+  @include govuk-font($size: 36, $weight: bold);
+  margin-top: 0;
 
-  a {
-    color: inherit;
+  .app-masthead--large & {
+    @include govuk-font($size: 48, $weight: "bold");
+  }
+}
+
+.app-masthead__description * {
+  @include govuk-font($size: 19);
+
+  .app-masthead--large * & {
+    @include govuk-font($size: 24);
   }
 }
 
