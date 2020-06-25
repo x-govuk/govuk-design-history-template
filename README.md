@@ -2,7 +2,7 @@
 
 A place for you to document your GOV.UK service designs.
 
-https://design-history.herokuapp.com/
+<https://design-history.herokuapp.com>
 
 ## Purpose of this project
 
