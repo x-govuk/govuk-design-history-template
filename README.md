@@ -26,9 +26,11 @@ This repository makes it easy to:
 Most of the time you'll be adding new posts. If you're just doing this then:
 
 * Open Terminal
-* Type `npm run watch`
+* Type `npm start`
 
-This will automatically restart the application with any changes to Markdown, images, CSS, JavaScript applied.
+This will automatically restart the application with any changes to your posts an any images applied.
+
+If you want to make changes to CSS and JavaScript, and watch for those changes, run `npm run dev`.
 
 ## Example design histories
 
