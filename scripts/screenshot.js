@@ -1,27 +1,31 @@
 /*
-  Usage:
-  Set domain to the website you want to screenshot, eg localhost:3000
-  Set paths to an array of named paths (see example)
-
-  Run:
-  node scripts/screenshot.js name-of-directory
-  or
-  node scripts/screenshot.js apply-for-teacher-training/name-of-directory
-
-  Example paths:
-  paths = [
-    { title: 'Index page', path: '/'},
-    { title: 'Terms and conditions', path: '/terms-conditions'}
-  ]
-*/
-const paths = [{
-  title: 'Index page',
-  path: '/'
-}]
-const { DateTime } = require('luxon')
+ * STEP 1
+ * Set `domain` to the website you want to screenshot, eg localhost:3000
+ */
 const domain = 'http://localhost:3000'
 
+/*
+ * STEP 2
+ * Set `paths` to an array of named paths, for example:
+ *
+ * [
+ *   { title: 'Index page', path: '/'},
+ *   { title: 'Terms and conditions', path: '/terms-conditions'}
+ * ]
+ */
+const paths = [
+  { title: 'Index page', path: '/'}
+]
+
+/*
+ * STEP 3
+ * Run: node scripts/screenshot.js [name-of-directory], for example:
+ *
+ * node scripts/screenshot.js apply-for-teacher-training/name-of-directory
+ */
+
 // Dependencies
+const { DateTime } = require('luxon')
 const webshot = require('webshot-node')
 const fs = require('fs')
 
