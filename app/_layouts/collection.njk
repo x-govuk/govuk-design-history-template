@@ -38,7 +38,7 @@
         {% if pagination %}
           <section class="govuk-grid-column-two-thirds">
             <h2 class="govuk-heading-l govuk-!-font-size-27">
-              {{ app.posts.title or "Posts" }}
+              {{ posts.title or app.posts.title or "Posts" }}
             </h2>
             {{ appDocumentList({
               classes: "govuk-!-margin-bottom-6",
@@ -69,7 +69,7 @@
         {% elif eleventyNavigation.key == "home" %}
           <div class="govuk-grid-column-full">
             <h2 class="govuk-heading-l govuk-!-font-size-27">
-              {{ app.sections.title or "Sections" }}
+              {{ sections.title or app.sections.title or "Sections" }}
             </h2>
           </div>
           {% for item in collections.all | eleventyNavigation("home") %}

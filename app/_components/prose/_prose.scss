@@ -35,9 +35,9 @@
     color: $govuk-secondary-text-colour;
   }
 
-  > p,
-  > dl,
-  > blockquote p {
+  p,
+  dl,
+  blockquote p {
     @extend %govuk-body-m;
     max-width: 40rem;
   }
@@ -51,6 +51,16 @@
   abbr {
     text-decoration: underline;
     text-decoration-style: dotted;
+  }
+
+  code {
+    background-color: govuk-colour("light-grey");
+    font-family: monospace;
+    padding: 2px govuk-spacing(1);
+  }
+
+  mark {
+    background-color: govuk-colour("yellow");
   }
 
   strong,
@@ -67,13 +77,13 @@
     margin-left: 0;
   }
 
-  > ol {
+  ol {
     @extend %govuk-list;
     @extend %govuk-list--number;
     max-width: 40rem;
   }
 
-  > ul:not([class]),
+  ul:not([class]),
   .table-of-contents ul {
     @extend %govuk-list;
     @extend %govuk-list--bullet;
@@ -82,10 +92,6 @@
 
   a:not([class]) {
     @extend %govuk-link;
-  }
-
-  mark {
-    background-color: govuk-colour("yellow");
   }
 
   hr {
@@ -135,16 +141,16 @@
     }
   }
 
-  pre,
-  code {
-    background-color: govuk-colour("light-grey");
-    font-family: monospace, monospace;
-    font-size: 0.875em;
-  }
-
   pre {
+    @extend %govuk-body-m;
+    background-color: govuk-colour("light-grey");
     padding: govuk-spacing(4);
     overflow: scroll;
+  }
+
+  pre code {
+    background-color: transparent;
+    padding: 0;
   }
 
   pre + h2 {

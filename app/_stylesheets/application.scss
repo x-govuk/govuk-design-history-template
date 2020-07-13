@@ -1,3 +1,5 @@
+$govuk-global-styles: true;
+
 @import "govuk/all.scss";
 @import "../_components/all.scss";
 @import "vendor/prism.scss";
