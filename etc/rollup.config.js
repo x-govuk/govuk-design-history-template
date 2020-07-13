@@ -1,4 +1,4 @@
-const resolve = require('@rollup/plugin-node-resolve')
+const {nodeResolve} = require('@rollup/plugin-node-resolve')
 const commonjs = require('@rollup/plugin-commonjs')
 
 module.exports = [{
@@ -8,7 +8,7 @@ module.exports = [{
     format: 'iife'
   },
   plugins: [
-    resolve(),
+    nodeResolve(),
     commonjs()
   ]
 }, {
