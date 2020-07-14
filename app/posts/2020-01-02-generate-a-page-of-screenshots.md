@@ -1,7 +1,7 @@
 ---
 title: Generate a page of screenshots
-description: Two scripts to help you generate posts that display a series of screenshots.
-date: 2020-01-03
+description: Learn how to use the 2 scripts that generate posts containing a series of screenshots.
+date: 2020-01-02
 ---
 
 The design history project provides 2 scripts to help you generate a post featuring a series of screenshots.

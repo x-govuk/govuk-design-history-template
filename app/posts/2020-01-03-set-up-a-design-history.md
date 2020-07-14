@@ -1,7 +1,7 @@
 ---
 title: Set up a design history
-description: How to get install, customise and publish your design history.
-date: 2020-01-02
+description: Learn how to install, customise and publish your design history.
+date: 2020-01-03
 related:
   items:
   - text: GOV.UK Design History on GitHub

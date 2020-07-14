@@ -1,7 +1,7 @@
 ---
 title: Divide a design history into different sections
 description: Learn how to divide your design history site into different sections. You can use this if your team is building multiple products or services.
-date: 2020-01-04
+date: 2020-01-01
 ---
 
 If your service has different products (for example a public facing service as well as an admin or support interface), you may want to divide your history up into different sections focused on each part of the service.
