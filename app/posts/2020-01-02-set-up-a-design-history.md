@@ -1,6 +1,6 @@
 ---
 title: Set up a design history
-description: How to get started with this tool.
+description: How to get install, customise and publish your design history.
 date: 2020-01-02
 related:
   items:
@@ -83,7 +83,7 @@ You’re now ready to start documenting your designs. To add a new post:
 
     For example: `2020-02-19-first-designs.md` will create a page that can be reached at `<your-design-history>/first-designs/`
 
-2. Posts are made up of two parts: a frontmatter and its contents.
+2. Posts are made up of 2 parts: a frontmatter and its contents.
 
     A frontmatter starts and ends with `---` and is written using a key/value data format called YAML. In most cases, you will only need three bits of information: `title`, `description` and `date`. For example:
 
@@ -101,12 +101,12 @@ You’re now ready to start documenting your designs. To add a new post:
 
 ## Launch
 
-Make things open, it makes them better. We can do this with a design history by deploying (or uploading) it to a third-party host. The design history includes support for two different services, Heroku and Netlify.
+[Make things open, it makes them better](https://www.gov.uk/guidance/government-design-principles#make-things-open-it-makes-things-better). You can do this by deploying (or uploading) your design history to a third-party host. This project includes support for 2 different services, Heroku and Netlify.
 
 ### Heroku
 
-Follow [this guide on connecting a GitHub repository to Heroku](https://devcenter.heroku.com/articles/github-integration). This is the easiest way to ensure changes are automatically deployed once they are merged to the default branch.
+Follow this [guide on connecting a GitHub repository to Heroku](https://devcenter.heroku.com/articles/github-integration). This is the easiest way to ensure changes are automatically deployed once they are merged to the default branch.
 
 ### Netlify
 
-Follow [this guide on deploying websites to Netlify](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/). When asked for a build command, use `npm run build`.
+Follow this [guide on deploying websites to Netlify](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/). When asked for a build command, use `npm run build`.

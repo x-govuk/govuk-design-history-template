@@ -1,16 +1,16 @@
 ---
 title: Generate a page of screenshots
-description: The design history provides a tool to help you generate a series of screenshots.
+description: Two scripts to help you generate posts that display a series of screenshots.
 date: 2020-01-03
 ---
 
-The design history project provides two scripts to help you generate a post featuring a series of screenshots.
+The design history project provides 2 scripts to help you generate a post featuring a series of screenshots.
 
 The first allows you to capture these screenshots from a sequence of URLs, perhaps from a user journey you have prototyped, the second allows you to generate a page from a folder of images.
 
 ## Generate a post with screenshots taken from a sequence of URLs
 
-1. Open `scripts/screenshot.js`. In this file you will see two values:
+1. Open `scripts/screenshot.js`. In this file you will see 2 values:
 
     * `domain`: the website you want to screenshot, eg localhost:3000
     * `paths`: an array of named paths
@@ -95,10 +95,10 @@ If you want to change the name of any images, you can use the `id` value to tell
 {% raw %}
 {{ appScreenshots({
   items: [
-    { text: "Index page", id: “01-index-page” },
-    { text: "Personal details", id: “02-personal-details” },
-    { text: "Check your answers", id: “03-check-your-answers” },
-    { text: "Confirmation", id: “04-confirmation” }
+    { text: "Index page", id: "01-index-page" },
+    { text: "Personal details", id: "02-personal-details" },
+    { text: "Check your answers", id: "03-check-your-answers" },
+    { text: "Confirmation", id: "04-confirmation" }
   ]
 }) }}
 {% endraw %}
