@@ -28,6 +28,7 @@
     "watch:styles": "node-sass app/_stylesheets -o public/stylesheets --include-path node_modules/govuk-frontend --watch",
     "watch": "npm-run-all --parallel watch:*",
     "dev": "npm run watch",
+    "prestart": "npm run build",
     "start": "npm run watch:files",
     "test": "standard"
   },
