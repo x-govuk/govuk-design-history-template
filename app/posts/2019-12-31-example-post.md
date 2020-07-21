@@ -14,7 +14,7 @@ Some real examples are:
 
 ## This page was generated
 
-After screenshots were saved to the `app/images/example-post` directory, this page was generated using the following command:
+After screenshots were saved to the `app/images/example-post` directory, [this page was generated](https://github.com/DFE-Digital/govuk-design-history/pull/11/commits/473f5aca5d978a3d18ac188b98c6c8ef6c000713) using the following command:
 
 ```
 node scripts/generate.js example-post
