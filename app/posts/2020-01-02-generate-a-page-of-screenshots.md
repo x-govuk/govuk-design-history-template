@@ -2,9 +2,13 @@
 title: Generate a page of screenshots
 description: Learn how to use the 2 scripts that generate posts containing a series of screenshots.
 date: 2020-01-02
+related:
+  items:
+  - text: An example post with screenshots
+    href: /example-post
 ---
 
-The design history project provides 2 scripts to help you generate a post featuring a series of screenshots.
+The design history project provides 2 scripts to help you generate a post featuring a list of screenshots. [See an example](/example-post/).
 
 The first allows you to capture these screenshots from a sequence of URLs, perhaps from a user journey you have prototyped, the second allows you to generate a page from a folder of images.
 
