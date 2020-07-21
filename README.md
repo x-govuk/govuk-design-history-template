@@ -35,6 +35,7 @@ If you want to make changes to CSS and JavaScript, and watch for those changes, 
 ## Example design histories
 
 * [Becoming a teacher design history](https://bat-design-history.netlify.app)
+* [Increasing children’s internet access](https://increasing-access-history.herokuapp.com/)
 
 ## Technical notes
 
