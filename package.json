@@ -14,8 +14,8 @@
   "author": "Becoming a teacher team",
   "license": "MIT",
   "homepage": "https://design-history.herokuapp.com",
-  "repository": "github:fofr/govuk-design-history",
-  "bugs": "https://github.com/fofr/govuk-design-history/issues",
+  "repository": "github:DFE-Digital/govuk-design-history",
+  "bugs": "https://github.com/DFE-Digital/govuk-design-history/issues",
   "scripts": {
     "prebuild": "rm -rf public",
     "build:files": "eleventy",
