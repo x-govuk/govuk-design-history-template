@@ -1,5 +1,5 @@
 ---
-title: An example post
+title: An example post with screenshots
 description: This example was generated using a script and shows how to use the screenshots macro.
 date: 2019-12-31
 ---
