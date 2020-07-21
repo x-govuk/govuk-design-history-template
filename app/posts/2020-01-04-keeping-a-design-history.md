@@ -1,14 +1,8 @@
 ---
-title: Keeping a design history
-description: How the Becoming a Teacher team uses a design history to create a permanent record of how their services have changed
+title: How a design history has helped
+description: A case study on the Becoming a Teacher team’s design history – how it’s been used and the story behind it.
 date: 2020-01-04
 ---
-
-As services age, as they’re iterated, built and rebuilt, and team members come and go, institutional memory fades and questions about why a service is the way it is become hard to answer. Context gets lost, research disappears and the design becomes opaque.
-
-Keeping a design history makes it easy to know why a service is the way it is.
-
-A design history is like a blog, with posts describing the development of new features, iterations of existing ones or findings from user research – anything that may be useful to return to later.
 
 On the Becoming a teacher team, we've been using a design history to document the evolution of the Find postgraduate teacher training and Apply for teacher training services since they began in May 2018.
 
@@ -18,7 +12,7 @@ Our design history is a public record of our designs and it tells the story of w
 
 ## The value of documenting design
 
-A design history looks forwards and backwards.
+The design history looks forwards and backwards.
 
 New posts show the team where the service is going. They highlight what will be researched or built next, and can draw attention to important design points.
 
@@ -34,12 +28,6 @@ Old posts tell us how we got here. With them we can:
 * see how things looked at significant milestones
 
 By making the design history open we can share our designs and our reasoning behind them. Whether that’s with colleagues, other teams, the rest of government, or with service assessors. Make things open, it makes things better.
-
-## Create your own design history
-
-We’ve found keeping a design history to be incredibly useful and now we want to see other service teams benefit too. We’ve taken our design history and made it into a tool for other teams to use.
-
-You can now use the [GOV.UK Design History](https://design-history.herokuapp.com/) to document and share your design decisions and create a permanent record of how your service has developed over time.
 
 ## How our design history began
 
