@@ -27,7 +27,7 @@ Old posts tell us how we got here. With them we can:
 * see things we tried but didn’t build
 * see how things looked at significant milestones
 
-By making the design history open we can share our designs and our reasoning behind them. Whether that’s with colleagues, other teams, the rest of government, or with service assessors. Make things open, it makes things better.
+By making the design history open we can share our designs and our reasoning behind them. Whether that’s with colleagues, other teams, the rest of government, or with service assessors. [Make things open, it makes things better](https://www.gov.uk/guidance/government-design-principles#make-things-open-it-makes-things-better).
 
 ## How our design history began
 
@@ -75,10 +75,8 @@ As of July 2020, we’re documenting 5 products with over 200 posts.
 
 ## What next
 
-We want more teams to keep an open and public design history.
+We want more teams to keep an open and public design history. When we’re designing something new, and we’re looking to see how other service teams have solved that problem, we want to read about their designs, to evaluate them and to build on them.
 
-We’ve created the [GOV.UK Design History](https://design-history.herokuapp.com/) to enable this – a repository with all the features, scripts and guides for getting started.
+We’ve created [GOV.UK Design History](https://design-history.herokuapp.com/) to enable this – a repository with all the features, scripts and guides for getting started.
 
 We’ll continue to add the features we need – like ways of documenting user needs and design hypotheses, integration with other tools like Trello, and more – but we hope that by opening up this tool to share with other teams, we’ll see new developments and ideas from outside our team.
-
-When we’re designing something new, and we’re looking to see how other service teams have solved that problem, we want to read about their designs, to evaluate them and to build on them.
