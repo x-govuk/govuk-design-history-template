@@ -107,6 +107,19 @@ You’re now ready to start documenting your designs. To add a new post:
 
 Follow this [guide on connecting a GitHub repository to Heroku](https://devcenter.heroku.com/articles/github-integration). This is the easiest way to ensure changes are automatically deployed once they are merged to the default branch.
 
+The process is very similar to [setting up a prototype on Heroku](https://govuk-prototype-kit.herokuapp.com/docs/publishing-on-heroku).
+
+#### Password protect your design history
+
+We’ve found it’s better to keep a design history public. But if you need to password protect yours you can add a username and password using environment variables (Heroku calls these “config vars”):
+
+* set a `USERNAME` and `PASSWORD` environment variable on your Heroku app ([a guide on how to do this](https://devcenter.heroku.com/articles/config-vars#managing-config-vars))
+* update the [`Procfile`](https://github.com/DFE-Digital/govuk-design-history/blob/main/Procfile) with:
+
+```
+web: http-server --username $USERNAME --password $PASSWORD -p $PORT
+```
+
 ### Netlify
 
 Follow this [guide on deploying websites to Netlify](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/). When asked for a build command, use `npm run build`.
