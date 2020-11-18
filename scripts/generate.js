@@ -17,7 +17,7 @@ warnIfNoArguments()
 
 const deepestDirectory = directoryName.split('/').pop()
 
-var title = deepestDirectory.replace(/-/g, ' ')
+let title = deepestDirectory.replace(/-/g, ' ')
 title = title.charAt(0).toUpperCase() + title.slice(1)
 
 const datestamp = DateTime.local().toFormat('yyyy-MM-dd')
@@ -25,7 +25,7 @@ const datestamp = DateTime.local().toFormat('yyyy-MM-dd')
 const imageDirectory = `app/images/${directoryName}`
 const postDirectory = `app/posts/${directoryName}`.replace('/' + deepestDirectory, '')
 
-var paths = []
+const paths = []
 
 // Run
 function start () {
@@ -61,8 +61,8 @@ function getExistingImages () {
       return
     }
 
-    var title = file.replace(/\.(png|jpg)$/, '').replace(/^\d{2}-/, '').replace(/-/g, ' ')
-    var image = {
+    const title = file.replace(/\.(png|jpg)$/, '').replace(/^\d{2}-/, '').replace(/-/g, ' ')
+    const image = {
       src: file,
       title: title.charAt(0).toUpperCase() + title.slice(1)
     }
@@ -71,7 +71,7 @@ function getExistingImages () {
 }
 
 function generatePage () {
-  var template = ''
+  let template = ''
   const templateStart = `---
 title: ${title}
 description:

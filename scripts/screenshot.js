@@ -14,7 +14,7 @@ const domain = 'http://localhost:3000'
  * ]
  */
 const paths = [
-  { title: 'Index page', path: '/'}
+  { title: 'Index page', path: '/' }
 ]
 
 /*
@@ -35,7 +35,7 @@ warnIfNoArguments()
 
 const deepestDirectory = directoryName.split('/').pop()
 
-var title = deepestDirectory.replace(/-/g, ' ')
+let title = deepestDirectory.replace(/-/g, ' ')
 title = title.charAt(0).toUpperCase() + title.slice(1)
 
 const datestamp = DateTime.local().toFormat('yyyy-MM-dd')
@@ -106,7 +106,7 @@ function takeScreenshots () {
 }
 
 function generatePage () {
-  var template = ''
+  let template = ''
   const templateStart = `---
 title: ${title}
 description:

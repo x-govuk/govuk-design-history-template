@@ -2,29 +2,29 @@
 import accessibleAutocomplete from 'accessible-autocomplete'
 
 // CONSTANTS
-var TIMEOUT = 10 // Time to wait before giving up fetching the search index
-var STATE_DONE = 4 // XHR client readyState DONE
+const TIMEOUT = 10 // Time to wait before giving up fetching the search index
+const STATE_DONE = 4 // XHR client readyState DONE
 
-var searchIndex = null
-var statusMessage = null
-var searchQuery = ''
-var searchCallback = function () {}
-var searchResults = []
+let searchIndex = null
+let statusMessage = null
+let searchQuery = ''
+let searchCallback = function () {}
+let searchResults = []
 
 function Search ($module) {
   this.$module = $module
 }
 
 Search.prototype.fetchSearchIndex = function (indexUrl, callback) {
-  var request = new XMLHttpRequest()
+  const request = new XMLHttpRequest()
   request.open('GET', indexUrl, true)
   request.timeout = TIMEOUT * 1000
   statusMessage = 'Loading search index'
   request.onreadystatechange = function () {
     if (request.readyState === STATE_DONE) {
       if (request.status === 200) {
-        var response = request.responseText
-        var json = JSON.parse(response)
+        const response = request.responseText
+        const json = JSON.parse(response)
         statusMessage = 'No results found'
         searchIndex = json
         callback(json)
@@ -65,7 +65,7 @@ Search.prototype.handleSearchQuery = function (query, callback) {
 }
 
 Search.prototype.handleOnConfirm = function (result) {
-  var path = result.url
+  const path = result.url
   if (!path) {
     return
   }
@@ -80,11 +80,11 @@ Search.prototype.inputValueTemplate = function (result) {
 
 Search.prototype.resultTemplate = function (result) {
   if (result) {
-    var elem = document.createElement('span')
-    var resultTitle = result.data.title
+    const elem = document.createElement('span')
+    const resultTitle = result.data.title
     elem.textContent = resultTitle
 
-    var section = document.createElement('span')
+    const section = document.createElement('span')
     section.className = 'app-site-search--section'
     section.innerHTML = result.dateString
 
@@ -94,7 +94,7 @@ Search.prototype.resultTemplate = function (result) {
 }
 
 Search.prototype.init = function () {
-  var $module = this.$module
+  const $module = this.$module
   if (!$module) {
     return
   }
@@ -102,7 +102,7 @@ Search.prototype.init = function () {
   // The Accessible Autocomplete only works in IE9+ so we can use newer JavaScript features here
   // but need to check for browsers that do not have these features and force the fallback by returning early.
   // http://responsivenews.co.uk/post/18948466399/cutting-the-mustard
-  var featuresNeeded = (
+  const featuresNeeded = (
     'querySelector' in document &&
     'addEventListener' in window &&
     !!(Array.prototype && Array.prototype.forEach)
@@ -129,7 +129,7 @@ Search.prototype.init = function () {
     tNoResults: function () { return statusMessage }
   })
 
-  var searchIndexUrl = $module.getAttribute('data-search-index')
+  const searchIndexUrl = $module.getAttribute('data-search-index')
   this.fetchSearchIndex(searchIndexUrl, function () {
     this.renderResults()
   }.bind(this))
