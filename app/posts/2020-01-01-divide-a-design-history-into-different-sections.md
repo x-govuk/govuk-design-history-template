@@ -36,6 +36,7 @@ Next, create a page that lists these related posts. You can do that by creating 
 2. Add these values to the frontmatter:
 
     ``` yaml
+    {% raw %}
     ---
     tags: false
     layout: collection
@@ -52,6 +53,7 @@ Next, create a page that lists these related posts. You can do that by creating 
         excerpt: "{{ description }}"
         parent: home
     ---
+    {% endraw %}
     ```
 
     You do not need to add any body content, but if you do, this will appear above the list of posts in this section.
