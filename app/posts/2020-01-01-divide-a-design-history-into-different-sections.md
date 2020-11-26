@@ -36,6 +36,7 @@ Next, create a page that lists these related posts. You can do that by creating 
 2. Add these values to the frontmatter:
 
     ``` yaml
+    {% raw %}
     ---
     tags: false
     layout: collection
@@ -52,10 +53,14 @@ Next, create a page that lists these related posts. You can do that by creating 
         excerpt: "{{ description }}"
         parent: home
     ---
+    {% endraw %}
     ```
 
     You do not need to add any body content, but if you do, this will appear above the list of posts in this section.
 
-### Update the home page to link to each section
+## Update the home page to link to each section
 
-Currently the homepage lists all posts in the site. You can change this to link to the different section indexes instead by removing the pagination value from the frontmatter in `app/index.md`.
+Currently the homepage lists all posts on the site. To change it so that only sections are linked to instead:
+
+1. Remove `pagination` from the frontmatter in `app/index.md`.
+2. Remove `eleventyComputed.eleventyNavigation.parent` from `app/posts/posts.json`

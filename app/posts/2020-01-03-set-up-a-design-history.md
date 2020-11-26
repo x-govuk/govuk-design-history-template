@@ -116,7 +116,7 @@ We’ve found it’s better to keep a design history public. But if you need to 
 * set a `USERNAME` and `PASSWORD` environment variable on your Heroku app ([a guide on how to do this](https://devcenter.heroku.com/articles/config-vars#managing-config-vars))
 * update the [`Procfile`](https://github.com/DFE-Digital/govuk-design-history/blob/main/Procfile) with:
 
-```
+```text
 web: http-server --username $USERNAME --password $PASSWORD -p $PORT
 ```
 
