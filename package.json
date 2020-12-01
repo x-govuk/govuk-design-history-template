@@ -37,7 +37,7 @@
     "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "@rollup/plugin-commonjs": "^16.0.0",
-    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
     "accessible-autocomplete": "^2.0.3",
     "govuk-frontend": "^3.10.0",
     "http-server": "^0.12.3",
