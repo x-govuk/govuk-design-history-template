@@ -54,7 +54,7 @@ Before adding posts, you’ll probably want to customise a few things for the si
 
 ### Change the name of the website
 
-1. Open the file `app/_data/app.json`
+1. Open the file `app/_data/app.js`
 2. Change the value for `productName` to the name you want to use. This name will appear in the header, and in page titles.
 
 ### Update the homepage
