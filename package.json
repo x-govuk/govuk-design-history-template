@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": "^14.0.0"
+    "node": "^15.0.0"
   },
   "description": "A place for documenting GOV.UK service designs",
   "keywords": [
