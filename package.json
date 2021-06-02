@@ -39,7 +39,7 @@
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "accessible-autocomplete": "^2.0.3",
-    "govuk-frontend": "^3.11.0",
+    "govuk-frontend": "^3.12.0",
     "http-server": "^0.12.3",
     "lodash": "^4.17.21",
     "luxon": "^1.26.0",

@@ -1,4 +1,5 @@
 $govuk-global-styles: true;
+$govuk-new-link-styles: true;
 
 @import "govuk/all.scss";
 @import "../_components/all.scss";
