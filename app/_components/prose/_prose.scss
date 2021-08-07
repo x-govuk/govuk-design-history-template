@@ -4,35 +4,41 @@
   h1:not([class]) {
     @extend %govuk-heading-xl;
     max-width: 40rem;
+    outline: 0;
   }
 
   h2:not([class]) {
     @extend %govuk-heading-l;
     max-width: 40rem;
+    outline: 0;
   }
 
   h3:not([class]) {
     @extend %govuk-heading-m;
     max-width: 40rem;
+    outline: 0;
   }
 
   h4:not([class]) {
     @extend %govuk-heading-s;
     max-width: 40rem;
+    outline: 0;
   }
 
   h5:not([class]) {
     @include govuk-font($size: 19);
     @include govuk-responsive-margin(4, "bottom");
-    margin-top: 0;
     color: $govuk-secondary-text-colour;
+    margin-top: 0;
+    outline: 0;
   }
 
   h6:not([class]) {
     @include govuk-font($size: 16);
     @include govuk-responsive-margin(4, "bottom");
-    margin-top: 0;
     color: $govuk-secondary-text-colour;
+    margin-top: 0;
+    outline: 0;
   }
 
   p,
@@ -177,20 +183,33 @@
   }
 
   .header-anchor {
+    color: $govuk-text-colour;
+    margin-left: -1.5ch;
+    padding-left: 1.5ch;
     text-decoration: none;
-    font-style: italic;
-    font-weight: normal;
-    color: govuk-colour("mid-grey");
-    margin-right: 0.1em;
 
-    @media (min-width: 1050px) {
-      position: absolute;
-      margin-left: -1em;
-      margin-right: 0;
+    &:visited {
+      color: $govuk-text-colour;
     }
 
     &:hover {
-      color: $govuk-link-hover-colour;
+      text-decoration: none !important;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      content: "#";
+      color: govuk-colour("mid-grey");
+      float: left;
+      font-style: italic;
+      height: 0;
+      left: -1.5ch;
+      position: relative;
+      width: 0;
+    }
+
+    &:focus::before {
+      color: $govuk-focus-text-colour;
     }
   }
 
