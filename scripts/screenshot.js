@@ -1,33 +1,29 @@
 /*
- * STEP 1
- * Set `domain` to the website you want to screenshot, eg localhost:3000
- */
+  Usage:
+  Set domain to the website you want to screenshot, eg localhost:3000
+  Set paths to an array of named paths (see example)
+
+  Run:
+  node scripts/screenshot.js name-of-directory
+  or
+  node scripts/screenshot.js apply-for-teacher-training/name-of-directory
+
+  Example paths:
+  paths = [
+    { title: 'Index page', path: '/'},
+    { title: 'Terms and conditions', path: '/terms-conditions'}
+  ]
+*/
+const paths = [{
+  title: 'Index page',
+  path: '/'
+}]
+const { DateTime } = require('luxon')
 const domain = 'http://localhost:3000'
 
-/*
- * STEP 2
- * Set `paths` to an array of named paths, for example:
- *
- * [
- *   { title: 'Index page', path: '/'},
- *   { title: 'Terms and conditions', path: '/terms-conditions'}
- * ]
- */
-const paths = [
-  { title: 'Index page', path: '/' }
-]
-
-/*
- * STEP 3
- * Run: node scripts/screenshot.js [name-of-directory], for example:
- *
- * node scripts/screenshot.js apply-for-teacher-training/name-of-directory
- */
-
 // Dependencies
-const { DateTime } = require('luxon')
 const webshot = require('webshot-node')
-const fs = require('fs')
+const fs = require('fs-extra')
 
 // Arguments
 const directoryName = process.argv.slice(-1)[0]
@@ -61,16 +57,16 @@ function warnIfNoArguments (title) {
 
 function makeDirectories () {
   if (!fs.existsSync(imageDirectory)) {
-    fs.mkdirSync(imageDirectory)
+    fs.ensureDirSync(imageDirectory)
   }
 
   if (!fs.existsSync(postDirectory)) {
-    fs.mkdirSync(postDirectory)
+    fs.ensureDirSync(postDirectory)
   }
 }
 
 function decoratePaths () {
-  paths.forEach(function (item, index) {
+  paths.forEach(item => {
     item.id = item.title.replace(/ +/g, '-').toLowerCase()
     item.file = `${imageDirectory}/${item.id}.png`
     item.src = item.file.replace('app/assets', '/public')
@@ -105,41 +101,31 @@ function takeScreenshots () {
   })
 }
 
+function generateFrontMatter (items) {
+  return `---
+  title: ${title}
+  date: ${datestamp}
+  screenshots:
+    ${items}
+---`
+}
+
 function generatePage () {
-  let template = ''
-  const templateStart = `---
-title: ${title}
-description:
-date: ${datestamp}
----
-{% from "screenshots/macro.njk" import appScreenshots with context %}
-{{ appScreenshots({
-  items: [`
+  let items = 'items:'
 
-  const templateEnd = `
-  ]
-}) }}
-`
-
-  paths.forEach(function (item, index) {
-    template += `${index > 0 ? ', ' : ''}
-    {
-      text: "${item.title}"
-    }`
+  paths.forEach(item => {
+    items += `
+      - text: "${item.title}"`
   })
 
   const filename = `${postDirectory}/${datestamp}-${deepestDirectory}.md`
 
-  fs.writeFile(
-    filename,
-    templateStart + template + templateEnd,
-    function (err) {
-      if (err) {
-        console.error(err)
-      }
-      console.log(`Page generated: ${filename}`)
+  fs.writeFile(filename, generateFrontMatter(items), err => {
+    if (err) {
+      console.error(err)
     }
-  )
+    console.log(`Page generated: ${filename}`)
+  })
 }
 
 start()

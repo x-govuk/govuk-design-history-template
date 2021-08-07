@@ -72,38 +72,31 @@ A post will also be created, using the name of the directory and current date, f
 
 ## The generated post
 
-This file will be pre-populated with a title, date, and a screenshots component:
+This file will be pre-populated with a title, date, and a list of screenshots:
 
 ``` yaml
 ---
 title: Submit personal details
-description:
 date: {{ "now" | date("y-LL-dd") }}
+screenshots:
+  items:
+    - "Index page"
+    - "Personal details"
+    - "Check your answers"
+    - "Confirmation"
 ---
-{% raw %}
-{% from "screenshots/macro.njk" import appScreenshots with context %}
-{{ appScreenshots({
-  items: [
-    { text: "Index page" },
-    { text: "Personal details" },
-    { text: "Check your answers" },
-    { text: "Confirmation" }
-  ]
-}) }}
-{% endraw %}
 ```
 
-If you want to change the name of any images, you can use the `id` value to tell the screenshots component what filename to look for, for example:
+If you want to change the name of any images, you can use the `src` value to tell the screenshots component what filename to look for, for example:
 
 ``` yaml
-{% raw %}
-{{ appScreenshots({
-  items: [
-    { text: "Index page", id: "01-index-page" },
-    { text: "Personal details", id: "02-personal-details" },
-    { text: "Check your answers", id: "03-check-your-answers" },
-    { text: "Confirmation", id: "04-confirmation" }
-  ]
-}) }}
-{% endraw %}
+title: Submit personal details
+date: {{ "now" | date("y-LL-dd") }}
+screenshots:
+  items:
+    - text: "Index page"
+      src: a-different-index-page-image.jpg
+    - "Personal details"
+    - "Check your answers"
+    - "Confirmation"
 ```
