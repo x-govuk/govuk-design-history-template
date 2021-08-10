@@ -55,7 +55,7 @@ function makeDirectories () {
 function getExistingImages () {
   const files = fs.readdirSync(imageDirectory)
 
-  files.forEach((file, index) => {
+  files.forEach(file => {
     if (!(/\.(png|jpg)$/.test(file))) {
       console.log('Ignoring: ' + file)
       return
@@ -70,40 +70,32 @@ function getExistingImages () {
   })
 }
 
+function generateFrontMatter (items) {
+  return `---
+  title: ${title}
+  date: ${datestamp}
+  screenshots:
+    ${items}
+---`
+}
+
 function generatePage () {
-  let template = ''
-  const templateStart = `---
-title: ${title}
-description:
-date: ${datestamp}
----
-{% from "screenshots/macro.njk" import appScreenshots with context %}
-{{ appScreenshots({
-  items: [`
+  let items = 'items:'
 
-  const templateEnd = `]
-}) }}
-`
-
-  paths.forEach(function (item, index) {
-    template += `${index > 0 ? ', ' : ''}{
-      text: "${item.title}",
-      img: { src: "${item.src}" }
-    }`
+  paths.forEach(item => {
+    items += `
+      - text: "${item.title}"
+        src: ${item.src}`
   })
 
   const filename = `${postDirectory}/${datestamp}-${deepestDirectory}.md`
 
-  fs.writeFile(
-    filename,
-    templateStart + template + templateEnd,
-    function (err) {
-      if (err) {
-        console.error(err)
-      }
-      console.log(`Page generated: ${filename}`)
+  fs.writeFile(filename, generateFrontMatter(items), err => {
+    if (err) {
+      console.error(err)
     }
-  )
+    console.log(`Page generated: ${filename}`)
+  })
 }
 
 start()
