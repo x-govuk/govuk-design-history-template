@@ -26,6 +26,7 @@ Read our guide on how to [set up a design history](https://design-history.heroku
 * [Get help with technology](https://ghwt-design-history.herokuapp.com)
 * [Get Into Teaching](https://get-into-teaching-design-history.netlify.app)
 * [Get teacher professional development](https://npq-design-history.herokuapp.com)
+* [Submit data on social housing sales and lettings (aka CORE)](https://core-design-history.netlify.app)
 
 ## Technical notes
 
