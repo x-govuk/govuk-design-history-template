@@ -17,7 +17,7 @@
   "repository": "github:DFE-Digital/govuk-design-history",
   "bugs": "https://github.com/DFE-Digital/govuk-design-history/issues",
   "scripts": {
-    "prebuild": "rm -rf public",
+    "prebuild": "rimraf public",
     "build:files": "eleventy",
     "build:javascripts": "rollup --config etc/rollup.config.js",
     "build:styles": "node-sass app/_stylesheets -o public/stylesheets --include-path node_modules/govuk-frontend --include-path app",
@@ -54,6 +54,7 @@
     "markdown-it-table-of-contents": "^0.5.2",
     "node-sass": "^6.0.0",
     "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
     "rollup": "^2.43.0"
   },
   "devDependencies": {
