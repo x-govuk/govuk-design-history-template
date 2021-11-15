@@ -50,7 +50,6 @@ module.exports = function (eleventyConfig) {
       layouts: '_layouts',
       includes: '_components'
     },
-    templateFormats: ['njk', 'md'],
-    passthroughFileCopy: true
+    templateFormats: ['njk', 'md']
   }
 }
