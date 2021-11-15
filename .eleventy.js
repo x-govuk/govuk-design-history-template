@@ -25,7 +25,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('includes', require('./lib/filters/includes'))
   eleventyConfig.addFilter('markdown', require('./lib/filters/markdown'))
   eleventyConfig.addFilter('pretty', require('./lib/filters/pretty'))
-  eleventyConfig.addFilter('slug', require('./lib/filters/slug'))
   eleventyConfig.addFilter('sort', require('./lib/filters/sort'))
   eleventyConfig.addFilter('tokenize', require('./lib/filters/tokenize'))
   eleventyConfig.addFilter('totalFromRows', require('./lib/filters/total-from-rows'))
