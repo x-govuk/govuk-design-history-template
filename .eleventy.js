@@ -40,9 +40,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ './app/images': '.' })
   eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/assets': 'assets' })
 
-  // Enable data deep merge
-  eleventyConfig.setDataDeepMerge(true)
-
   // Config
   return {
     dataTemplateEngine: 'njk',
