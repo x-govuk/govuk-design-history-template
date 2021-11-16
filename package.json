@@ -19,11 +19,8 @@
   "scripts": {
     "prebuild": "rimraf public",
     "build": "eleventy",
-    "prewatch": "npm run build",
-    "watch": "eleventy --serve --quiet",
-    "dev": "npm run watch",
     "prestart": "npm run build",
-    "start": "npm run watch",
+    "start": "eleventy --serve --quiet",
     "test": "standard"
   },
   "dependencies": {
