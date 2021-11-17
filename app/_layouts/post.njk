@@ -28,7 +28,7 @@
       {% endfor %}
     </div>
 
-    {% if related %}
+    {% if related.items | length > 0 %}
     <div class="govuk-grid-column-one-third">
       {{ appRelated({
         title: related.title or "Related links",
