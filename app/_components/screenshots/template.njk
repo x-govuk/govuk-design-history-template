@@ -1,5 +1,5 @@
 {%- set title = params.title or "Screenshots" -%}
-{%- set id = title | slug -%}
+{%- set id = title | slugify -%}
 {%- set headingLevel = params.headingLevel or 2 -%}
 <section class="app-screenshots app-prose govuk-!-margin-top-9" id="{{ id }}">
   <div class="govuk-!-display-none-print">
@@ -9,14 +9,14 @@
     <ul class="govuk-list app-screenshots__contents">
       {%- for item in params.items %}
         {%- set itemTitle = item.text or item -%}
-        {%- set itemId = item.id or (itemTitle | slug) -%}
+        {%- set itemId = item.id or (itemTitle | slugify) -%}
         <li><a href="#{{ itemId }}">{{ itemTitle }}</a></li>
       {%- endfor %}
     </ul>
   </div>
 {% for item in params.items -%}
   {%- set itemTitle = item.text or item -%}
-  {%- set itemId = item.id or (itemTitle | slug) -%}
+  {%- set itemId = item.id or (itemTitle | slugify) -%}
   {%- set file = item.src or (itemId + ".png") -%}
   {%- set alt = item.alt or ("Screenshot of " + itemTitle) -%}
   <figure class="app-screenshots__screenshot" id="{{ itemId }}">
