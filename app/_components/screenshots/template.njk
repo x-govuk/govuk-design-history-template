@@ -17,7 +17,7 @@
 {% for item in params.items -%}
   {%- set itemTitle = item.text or item -%}
   {%- set itemId = item.id or (itemTitle | slugify) -%}
-  {%- set file = item.src or (itemId + ".png") -%}
+  {%- set file = item.src or (item.img and item.img.src) or (itemId + ".png") -%}
   {%- set alt = item.alt or ("Screenshot of " + itemTitle) -%}
   <figure class="app-screenshots__screenshot" id="{{ itemId }}">
     <h{{ headingLevel + 1 }} tabindex="-1">
