@@ -10,6 +10,5 @@ posts:
   title: Getting started
 eleventyComputed:
   eleventyNavigation:
-    key: home
-    title: "{{ title }}"
+    key: Home
 ---
