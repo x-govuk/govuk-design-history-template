@@ -20,6 +20,6 @@ module.exports = function (eleventyConfig) {
       layouts: '_layouts',
       includes: '_components'
     },
-    templateFormats: ['njk', 'md']
+    templateFormats: ['11ty.js', 'md', 'njk']
   }
 }
