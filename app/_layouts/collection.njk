@@ -1,4 +1,4 @@
-{% extends "base.njk" %}
+{% extends "govuk/layouts/base.njk" %}
 
 {% from "document-list/macro.njk" import appDocumentList %}
 {% from "masthead/macro.njk" import appMasthead %}
@@ -10,10 +10,10 @@
   {% call appMasthead({
     classes: "app-masthead--large" if eleventyNavigation.key == "home",
     title: {
-      html: title | widont
+      html: title | noOrphans
     } if title,
     description: {
-      html: description | widont | markdown
+      html: description | noOrphans | markdown
     } if description,
     startButton: startButton if startButton,
     image: image if image

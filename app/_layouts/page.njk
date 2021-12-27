@@ -1,4 +1,4 @@
-{% extends "base.njk" %}
+{% extends "govuk/layouts/base.njk" %}
 
 {% from "article/macro.njk" import appArticle %}
 {% from "screenshots/macro.njk" import appScreenshots %}
@@ -7,7 +7,7 @@
 {% block content %}
   {% call appArticle({
     header: {
-      title: title | widont
+      title: title | noOrphans
     }
   }) %}
     {{ appProse({

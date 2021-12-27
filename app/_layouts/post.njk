@@ -1,4 +1,4 @@
-{% extends "base.njk" %}
+{% extends "govuk/layouts/base.njk" %}
 
 {% from "article/macro.njk" import appArticle %}
 {% from "related/macro.njk" import appRelated %}
@@ -8,7 +8,7 @@
 {% block content %}
   {% call appArticle({
     header: {
-      title: title | widont
+      title: title | noOrphans
     },
     footer: {
       date: page.date,
