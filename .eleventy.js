@@ -21,13 +21,9 @@ module.exports = function (eleventyConfig) {
 
   // Filters
   eleventyConfig.addFilter('date', require('./lib/filters/date'))
-  eleventyConfig.addFilter('fixed', require('./lib/filters/fixed'))
-  eleventyConfig.addFilter('includes', require('./lib/filters/includes'))
   eleventyConfig.addFilter('markdown', require('./lib/filters/markdown'))
   eleventyConfig.addFilter('pretty', require('./lib/filters/pretty'))
-  eleventyConfig.addFilter('sort', require('./lib/filters/sort'))
   eleventyConfig.addFilter('tokenize', require('./lib/filters/tokenize'))
-  eleventyConfig.addFilter('totalFromRows', require('./lib/filters/total-from-rows'))
   eleventyConfig.addFilter('widont', require('./lib/filters/widont'))
 
   // Transforms
