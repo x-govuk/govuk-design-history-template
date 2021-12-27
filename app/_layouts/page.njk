@@ -1,8 +1,10 @@
-{% extends "govuk/layouts/base.njk" %}
+{% extends "govuk/layouts/page.njk" %}
 
-{% from "article/macro.njk" import appArticle %}
 {% from "screenshots/macro.njk" import appScreenshots %}
-{% from "prose/macro.njk" import appProse %}
+
+{% block styles %}
+  <link href="/stylesheets/application.css" media="all" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
   {% call appArticle({

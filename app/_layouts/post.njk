@@ -1,9 +1,10 @@
-{% extends "govuk/layouts/base.njk" %}
+{% extends "govuk/layouts/post.njk" %}
 
-{% from "article/macro.njk" import appArticle %}
-{% from "related/macro.njk" import appRelated %}
 {% from "screenshots/macro.njk" import appScreenshots %}
-{% from "prose/macro.njk" import appProse %}
+
+{% block styles %}
+  <link href="/stylesheets/application.css" media="all" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
   {% call appArticle({
@@ -12,7 +13,8 @@
     },
     footer: {
       date: page.date,
-      modified: modified if modified
+      modified: modified if modified,
+      author: author if author
     }
   }) %}
   <div class="govuk-grid-row">
