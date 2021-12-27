@@ -38,7 +38,7 @@ Next, create a page that lists these related posts. You can do that by creating 
     ``` yaml
     {% raw %}
     ---
-    tags: false
+    override:tags: []
     layout: collection
     title: Service support interface
     description: A tool for support agents to manage the service
