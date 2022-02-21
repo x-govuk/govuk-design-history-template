@@ -1,6 +1,6 @@
 ---
 title: An example post with screenshots
-description: This example was generated using a script and shows how to use the screenshots macro.
+description: This example was generated using a script and shows how to automatically include a list of screenshots at the end of your post.
 date: 2019-12-31
 screenshots:
   items:
