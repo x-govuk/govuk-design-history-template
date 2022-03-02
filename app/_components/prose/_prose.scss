@@ -1,6 +1,10 @@
 .app-prose {
   @include govuk-font($size: false);
 
+  > :first-child {
+    margin-top: 0;
+  }
+
   h1:not([class]) {
     @extend %govuk-heading-xl;
     max-width: 40rem;
@@ -52,10 +56,6 @@
     @extend .govuk-inset-text;
     margin-left: 0;
     margin-right: 0;
-
-    &:first-child {
-      margin-top: 0;
-    }
   }
 
   figure {
