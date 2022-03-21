@@ -1,21 +1,13 @@
 {
   "name": "govuk-design-history",
   "version": "1.0.0",
-  "private": true,
-  "engines": {
-    "node": "^16.0.0"
-  },
   "description": "A template for a place for documenting GOV.UK service designs",
   "keywords": [
     "design-history",
     "government",
     "govuk"
   ],
-  "author": "Becoming a teacher team",
   "license": "MIT",
-  "homepage": "https://design-history.herokuapp.com",
-  "repository": "github:x-govuk/govuk-design-history",
-  "bugs": "https://github.com/x-govuk/govuk-design-history/issues",
   "scripts": {
     "prebuild": "rimraf public",
     "build": "eleventy",
@@ -50,6 +42,10 @@
   "devDependencies": {
     "standard": "^16.0.4",
     "webshot-node": "^0.18.2"
+  },
+  "private": true,
+  "engines": {
+    "node": "^16.0.0"
   },
   "standard": {
     "ignore": [
