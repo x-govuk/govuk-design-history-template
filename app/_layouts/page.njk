@@ -1,10 +1,6 @@
-{% extends "govuk/layouts/page.njk" %}
+{% extends "layouts/page.njk" %}
 
 {% from "screenshots/macro.njk" import appScreenshots %}
-
-{% block styles %}
-  <link rel="stylesheet" href="/assets/application.css">
-{% endblock %}
 
 {% block content %}
   {% call appArticle({
@@ -12,9 +8,7 @@
       title: title | noOrphans
     }
   }) %}
-    {{ appProse({
-      prose: content
-    }) }}
+    {{ content }}
 
     {% for collection in screenshots %}
       {{ appScreenshots(collection) }}

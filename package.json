@@ -1,6 +1,6 @@
 {
   "name": "govuk-design-history",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A template for a place for documenting GOV.UK service designs",
   "keywords": [
     "design-history",
@@ -18,8 +18,8 @@
     "test": "standard"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0-beta",
-    "govuk-eleventy-plugin": "^1.0.3",
+    "@11ty/eleventy": "^1.0.0",
+    "govuk-eleventy-plugin": "^2.0.0-beta",
     "http-server": "^14.0.0",
     "rimraf": "^3.0.2",
     "sass": "^1.45.1"

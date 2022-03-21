@@ -1,9 +1,7 @@
-{% extends "govuk/layouts/product.njk" %}
+{% extends "layouts/product.njk" %}
 
 {% block content %}
-  {{ appProse({
-    prose: content
-  }) }}
+  {{ content }}
   <div class="govuk-grid-row">
     {# Paginate posts if front matter includes the pagination key #}
     {% if pagination %}
@@ -12,7 +10,7 @@
           {{ posts.title or app.posts.title or "Posts" }}
         </h2>
         {{ appDocumentList({
-          classes: "govuk-!-margin-bottom-6",
+          classes: "app-document-list--large",
           items: pagination.items
         }) }}
         {{ appPagination({
@@ -21,19 +19,16 @@
             href: pagination.href.previous
           } if pagination.href.previous,
           next: {
-            text: 'Next',
+            text: "Next",
             href: pagination.href.next
           } if pagination.href.next,
           selected: pagination.pageNumber,
           items: pagination.hrefs
         }) }}
       </section>
-      {% if related.items | length > 0 %}
+      {% if related.sections[0].items | length > 0 %}
         <div class="govuk-grid-column-one-third">
-          {{ appRelated({
-            title: related.title or "Related links",
-            items: related.items
-          }) }}
+          {{ xGovukRelatedNavigation(related) }}
         </div>
       {% endif %}
     {# List sections (pages whose parent is `Home`) if homepage has no pagination key set #}

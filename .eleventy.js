@@ -1,13 +1,20 @@
 module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(require('govuk-eleventy-plugin'), {
-    searchIndex: '/search.json',
-    views: ['app/_components']
+    stylesheets: [
+      '/styles/application.css'
+    ],
+    header: {
+      productName: 'Design history',
+      search: {
+        indexPath: '/search.json',
+        sitemapPath: '/sitemap'
+      }
+    }
   })
 
   // Passthrough
   eleventyConfig.addPassthroughCopy({ './app/images': '.' })
-  eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/assets': 'assets' })
 
   // Config
   return {
@@ -19,7 +26,6 @@ module.exports = function (eleventyConfig) {
       output: 'public',
       layouts: '_layouts',
       includes: '_components'
-    },
-    templateFormats: ['11ty.js', 'md', 'njk']
+    }
   }
 }

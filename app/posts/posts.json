@@ -1,6 +1,5 @@
 {
   "layout": "post",
-  "permalink": "{{ page.filePathStem | replace('posts/', '') }}/",
-  "tags": ["search-index"],
-  "parent": "Home"
+  "includeInBreadcrumbs": true,
+  "permalink": "{{ page.filePathStem | replace('posts/', '') }}/"
 }
