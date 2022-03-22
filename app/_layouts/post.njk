@@ -1,41 +1,36 @@
-{% extends "base.njk" %}
+{% extends "layouts/post.njk" %}
 
-{% from "article/macro.njk" import appArticle %}
-{% from "related/macro.njk" import appRelated %}
 {% from "screenshots/macro.njk" import appScreenshots %}
-{% from "prose/macro.njk" import appProse %}
 
 {% block content %}
-  {% call appArticle({
-    header: {
-      title: title | widont
-    },
-    footer: {
-      date: page.date,
-      modified: modified if modified
-    }
-  }) %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      {{ appProse({
-        prose: content
-      }) }}
+      {% call appArticle({
+        header: {
+          title: title
+        },
+        footer: {
+          date: date,
+          modified: modified,
+          author: author,
+          authors: authors
+        },
+        image: image
+      }) %}
+        {{ content }}
 
-      {% for collection in screenshots %}
-        {{ appScreenshots(collection) }}
-      {% else %}
-        {{ appScreenshots(screenshots) if screenshots }}
-      {% endfor %}
+        {% for collection in screenshots %}
+          {{ appScreenshots(collection) }}
+        {% else %}
+          {{ appScreenshots(screenshots) if screenshots }}
+        {% endfor %}
+      {% endcall %}
     </div>
 
-    {% if related.items | length > 0 %}
+    {% if related.sections[0].items | length > 0 %}
     <div class="govuk-grid-column-one-third">
-      {{ appRelated({
-        title: related.title or "Related links",
-        items: related.items
-      }) }}
+      {{ xGovukRelatedNavigation(related) }}
     </div>
     {% endif %}
   </div>
-  {% endcall %}
 {% endblock %}

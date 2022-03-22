@@ -1,18 +1,14 @@
-{% extends "base.njk" %}
+{% extends "layouts/page.njk" %}
 
-{% from "article/macro.njk" import appArticle %}
 {% from "screenshots/macro.njk" import appScreenshots %}
-{% from "prose/macro.njk" import appProse %}
 
 {% block content %}
   {% call appArticle({
     header: {
-      title: title | widont
+      title: title | noOrphans
     }
   }) %}
-    {{ appProse({
-      prose: content
-    }) }}
+    {{ content }}
 
     {% for collection in screenshots %}
       {{ appScreenshots(collection) }}
