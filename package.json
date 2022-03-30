@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf public",
-    "build": "eleventy --quiet",
+    "build": "eleventy",
     "predev": "npm run build",
     "dev": "eleventy --serve --quiet",
     "prestart": "npm run build",
