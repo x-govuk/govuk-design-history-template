@@ -24,14 +24,14 @@ New posts show the team where the service is going. They highlight what will be 
 
 Old posts tell us how we got here. With them we can:
 
-* discover what we did and why
-* re-evaluate decisions
-* see how a feature has changed
-* see how things tested in research
-* give context to new team members
-* see what didn’t work
-* see things we tried but didn’t build
-* see how things looked at significant milestones
+- discover what we did and why
+- re-evaluate decisions
+- see how a feature has changed
+- see how things tested in research
+- give context to new team members
+- see what didn’t work
+- see things we tried but didn’t build
+- see how things looked at significant milestones
 
 By making the design history open we can share our designs and our reasoning behind them. Whether that’s with colleagues, other teams, the rest of government, or with service assessors. [Make things open, it makes things better](https://www.gov.uk/guidance/government-design-principles#make-things-open-it-makes-things-better).
 

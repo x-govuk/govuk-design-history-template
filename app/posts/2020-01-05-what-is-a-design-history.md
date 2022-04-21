@@ -10,13 +10,13 @@ A design history site is like a blog, with posts describing the development of n
 
 This project was developed by the Becoming a teacher team at the Department for Education who found that by keeping a design history, they could:
 
-* re-evaluate decisions
-* see how a feature changed over time
-* see how things tested in research
-* give context to new team members
-* demonstrate reasons why certain features did not work
-* create snapshots of how things looked at significant milestones
-* share design decisions across government
-* share everything with service assessors
+- re-evaluate decisions
+- see how a feature changed over time
+- see how things tested in research
+- give context to new team members
+- demonstrate reasons why certain features did not work
+- create snapshots of how things looked at significant milestones
+- share design decisions across government
+- share everything with service assessors
 
 As of February 2020, the [Becoming a teacher design history](https://bat-design-history.netlify.app) includes more than 200 posts documenting 5 different services. You can learn more about how and why the team created their design history on the [DfE Digital blog](https://dfedigital.blog.gov.uk/2020/09/01/design-history/).

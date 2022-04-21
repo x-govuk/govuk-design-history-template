@@ -18,14 +18,14 @@ You can create a section by grouping related posts. You can do this in 2 ways; k
 
 4. In this JSON file, declare a tag which should be used to group these related posts, and a parent name to use in the breadcrumb navigation (the parent being the name of this section). For example
 
-    ```` json
-    {
-      "tags": ["support-interface"],
-      "eleventyNavigation": {
-        "parent": "Service support interface"
-      }
-    }
-    ````
+   ```json
+   {
+     "tags": ["support-interface"],
+     "eleventyNavigation": {
+       "parent": "Service support interface"
+     }
+   }
+   ```
 
 ## Create an index page for each section
 
@@ -33,34 +33,36 @@ Next, create a page that lists these related posts. You can do that by creating 
 
 1. Within the subfolder created in the previous step, create a markdown file, with the same name as the folder. For example, for the folder app/posts/support-interface/, add the file app/posts/support-interface/support-interface.md
 
-2. Add these values to the frontmatter:
+2. Add these values to the front matter:
 
-    ``` yaml
-    {% raw %}
-    ---
-    override:tags: []
-    layout: collection
-    title: Service support interface
-    description: A tool for support agents to manage the service
-    pagination:
-      data: collections.support-interface
-      reverse: true
-      size: 50
-    permalink: "support-interface/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}{% endif %}/"
-    eleventyComputed:
-      eleventyNavigation:
-        key: "{{ title }}"
-        excerpt: "{{ description }}"
-        parent: home
-    ---
-    {% endraw %}
-    ```
+   {% raw %}
 
-    You do not need to add any body content, but if you do, this will appear above the list of posts in this section.
+   ```yaml
+   ---
+   override:tags: []
+   layout: collection
+   title: Service support interface
+   description: A tool for support agents to manage the service
+   pagination:
+     data: collections.support-interface
+     reverse: true
+     size: 50
+   permalink: "support-interface/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}{% endif %}/"
+   eleventyComputed:
+     eleventyNavigation:
+       key: "{{ title }}"
+       excerpt: "{{ description }}"
+       parent: home
+   ---
+   ```
+
+   {% endraw %}
+
+   You do not need to add any body content, but if you do, this will appear above the list of posts in this section.
 
 ## Update the home page to link to each section
 
 Currently the homepage lists all posts on the site. To change it so that only sections are linked to instead:
 
-1. Remove `pagination` from the frontmatter in `app/index.md`.
+1. Remove `pagination` from the front matter in `app/index.md`.
 2. Remove `eleventyComputed.eleventyNavigation.parent` from `app/posts/posts.json`

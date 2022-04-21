@@ -25,13 +25,13 @@ Start by making a copy of this project. The easiest way to do this is on GitHub.
 
 To start making changes, you’ll need to download the repository to your own computer. Assuming your GitHub user is `my-username`, and you called your repository `my-service-design-history`, using the Terminal you would type:
 
-``` text
+```shell
 git clone git@github.com:my-username/my-service-design-history.git
 ```
 
 Next, change into the downloaded folder, and install all the dependencies needed to run the design history project. Do this by typing the following:
 
-``` text
+```shell
 cd my-service-design-history
 npm install
 ```
@@ -40,7 +40,7 @@ npm install
 
 Before uploading your design history to a public URL, it can be useful to preview it locally, on your own computer. To do this type:
 
-``` text
+```shell
 npm start
 ```
 
@@ -83,9 +83,9 @@ You’re now ready to start documenting your designs. To add a new post:
 
     For example: `2020-02-19-first-designs.md` will create a page that can be reached at `<your-design-history>/first-designs/`
 
-2. Posts are made up of 2 parts: a frontmatter and its contents.
+2. Posts are made up of 2 parts: a front matter and its contents.
 
-    A frontmatter starts and ends with `---` and is written using a key/value data format called YAML. In most cases, you will only need three bits of information: `title`, `description` and `date`. For example:
+   A front matter starts and ends with `---` and is written using a key/value data format called YAML. In most cases, you will only need three bits of information: `title`, `description` and `date`. For example:
 
     ``` yaml
     ---
