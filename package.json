@@ -25,7 +25,7 @@
     "sass": "^1.50.1"
   },
   "devDependencies": {
-    "standard": "^16.0.4",
+    "standard": "^17.0.0",
     "webshot-node": "^0.18.2"
   },
   "private": true,
