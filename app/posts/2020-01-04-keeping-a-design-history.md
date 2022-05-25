@@ -2,6 +2,12 @@
 title: How a design history has helped
 description: A case study on the Becoming a Teacher team’s design history – how it’s been used and the story behind it.
 date: 2020-01-04
+related:
+  sections:
+    - title: Related content
+      items:
+        - text: Becoming a teacher design history
+          href: https://bat-design-history.netlify.app/
 ---
 
 On the Becoming a teacher team, we've been using a design history to document the evolution of the Find postgraduate teacher training and Apply for teacher training services since they began in May 2018.
