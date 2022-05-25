@@ -26,9 +26,9 @@
           items: pagination.hrefs
         }) }}
       </section>
-      {% if related.sections[0].items | length > 0 %}
+      {% if aside or related %}
         <div class="govuk-grid-column-one-third">
-          {{ xGovukRelatedNavigation(related) }}
+          {% include "layouts/shared/related.njk" %}
         </div>
       {% endif %}
     {# List sections (pages with a parent that is the homepage) if homepage has no pagination key set #}
