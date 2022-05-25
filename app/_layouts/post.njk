@@ -3,34 +3,32 @@
 {% from "screenshots/macro.njk" import appScreenshots %}
 
 {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      {% call appArticle({
-        header: {
-          title: title
-        },
-        footer: {
-          date: date,
-          modified: modified,
-          author: author,
-          authors: authors
-        },
-        image: image
-      }) %}
+  {% call appArticle({
+    header: {
+      title: title
+    },
+    footer: {
+      date: date,
+      modified: modified,
+      author: author,
+      authors: authors
+    },
+    image: image
+  }) %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
         {{ content }}
-
         {% for collection in screenshots %}
           {{ appScreenshots(collection) }}
         {% else %}
           {{ appScreenshots(screenshots) if screenshots }}
         {% endfor %}
-      {% endcall %}
+      </div>
+      {% if aside or related %}
+      <div class="govuk-grid-column-one-third">
+        {% include "layouts/shared/related.njk" %}
+      </div>
+      {% endif %}
     </div>
-
-    {% if related.sections[0].items | length > 0 %}
-    <div class="govuk-grid-column-one-third">
-      {{ xGovukRelatedNavigation(related) }}
-    </div>
-    {% endif %}
-  </div>
+  {% endcall %}
 {% endblock %}
