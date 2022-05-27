@@ -4,6 +4,7 @@ module.exports = function (eleventyConfig) {
     stylesheets: [
       '/styles/application.css'
     ],
+    headingPermalinks: true,
     header: {
       productName: 'Design history',
       search: {
