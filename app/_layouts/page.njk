@@ -3,11 +3,11 @@
 {% from "screenshots/macro.njk" import appScreenshots %}
 
 {% block content %}
-  {% call appArticle({
-    header: {
-      title: title | noOrphans
-    }
-  }) %}
+  {{ appDocumentHeader({
+    title: title | noOrphans
+  }) }}
+
+  {% call appProseScope() %}
     {{ content }}
 
     {% for collection in screenshots %}
