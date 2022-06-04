@@ -1,5 +1,6 @@
 {
   "layout": "post",
   "includeInBreadcrumbs": true,
-  "permalink": "{{ page.filePathStem | replace('posts/', '') }}/"
+  "permalink": "{{ page.filePathStem | replace('posts/', '') }}/",
+  "tags": ["post"]
 }
