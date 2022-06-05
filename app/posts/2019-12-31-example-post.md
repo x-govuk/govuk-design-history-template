@@ -18,9 +18,9 @@ This is an example of a standard design history post – it begins with a preamb
 
 Some real examples are:
 
-* [Apply for teacher training: Reasons for withdrawing an application](https://bat-design-history.netlify.app/apply-for-teacher-training/reason-for-withdraw/)
-* [Manage teacher applications: Deferring an application](https://bat-design-history.netlify.app/manage-teacher-training-applications/deferring-applications-to-the-next-cycle/)
-* [Find postgraduate teacher training: A snapshot of the service](https://bat-design-history.netlify.app/find-teacher-training/find-december-2019/)
+- [Apply for teacher training: Reasons for withdrawing an application](https://bat-design-history.netlify.app/apply-for-teacher-training/reason-for-withdraw/)
+- [Manage teacher applications: Deferring an application](https://bat-design-history.netlify.app/manage-teacher-training-applications/deferring-applications-to-the-next-cycle/)
+- [Find postgraduate teacher training: A snapshot of the service](https://bat-design-history.netlify.app/find-teacher-training/find-december-2019/)
 
 ## This page was generated
 
