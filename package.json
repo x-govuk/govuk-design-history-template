@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "standard": "^17.0.0",
-    "webshot-node": "^0.18.2"
+    "webshot-node": "^0.18.3"
   },
   "private": true,
   "engines": {
