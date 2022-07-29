@@ -13,18 +13,15 @@
           classes: "app-document-list--large",
           items: pagination.items
         }) }}
-        {{ appPagination({
+        {{ govukPagination({
           previous: {
-            text: "Previous",
             href: pagination.href.previous
-          } if pagination.href.previous,
+          },
           next: {
-            text: "Next",
             href: pagination.href.next
-          } if pagination.href.next,
-          selected: pagination.pageNumber,
-          items: pagination.hrefs
-        }) }}
+          },
+          items: pagination | itemsFromPagination
+        }) if pagination.pages.length > 1 }}
       </section>
       {% if aside or related %}
         <div class="govuk-grid-column-one-third">
