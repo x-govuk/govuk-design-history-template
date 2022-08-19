@@ -4,7 +4,7 @@
 <section class="app-screenshots app-prose govuk-!-margin-top-9" id="{{ id }}">
   <div class="govuk-!-display-none-print">
     <h{{ headingLevel }} class="govuk-heading-l" tabindex="-1">
-      <a class="app-heading-anchor" href="#{{ id }}">{{ title }}</a>
+      <a class="app-link--heading govuk-link" href="#{{ id }}">{{ title }}</a>
     </h{{ headingLevel }}>
     <ul class="govuk-list app-screenshots__contents">
       {%- for item in params.items %}
@@ -21,7 +21,7 @@
   {%- set alt = item.alt or ("Screenshot of " + itemTitle) -%}
   <figure class="app-screenshots__screenshot" id="{{ itemId }}">
     <h{{ headingLevel + 1 }} class="govuk-heading-m" tabindex="-1">
-      <a class="app-heading-anchor" href="#{{ itemId }}">{{ itemTitle }}</a>
+      <a class="app-link--heading govuk-link" href="#{{ itemId }}">{{ itemTitle }}</a>
     </h{{ headingLevel + 1 }}>
     <a class="govuk-link" href="{{ file }}"><img src="{{ file }}" alt="{{ alt }}"></a>
     {%- if item.caption %}<figcaption>{{ item.caption | markdown | safe }}</figcaption>{% endif %}
