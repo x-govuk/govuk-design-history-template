@@ -31,7 +31,7 @@ You can group posts together into sections using folders
 
 Next, create a page that lists these related posts. You can do that by creating an index page.
 
-1. Within the `posts` folder, create a markdown file for each section. For example, for the folder `app/posts/support-interface/``, add the file `app/posts/support-interface.md`.
+1. Within the `posts` folder, create a markdown file for each section. For example, for the folder `app/posts/support-interface/`, add the file `app/posts/support-interface.md`.
 
 2. At the top of the markdown file for the section, add this front matter data:
 
