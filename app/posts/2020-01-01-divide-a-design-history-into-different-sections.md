@@ -52,7 +52,7 @@ Next, create a page that lists these related posts. You can do that by creating 
 
    {% endraw %}
 
-   The label appearing after `date: collections.` needs to match the tag you added to the JSON file for the section. This tells the index page which set of posts to list.
+   The value for `pagination.data` should use the collection created by the tag you added to the JSON file for the section. This tells the index page which posts to list. For example, if your tag is `support-interface`, the value for `pagination.data` would be `collections.support-interface`.
 
    You do not need to add any body content, but if you do, this will appear above the list of posts in this section.
 
