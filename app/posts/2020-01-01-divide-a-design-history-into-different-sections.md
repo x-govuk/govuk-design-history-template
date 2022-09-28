@@ -4,15 +4,15 @@ description: Learn how to divide your design history site into different section
 date: 2020-01-01
 ---
 
-If your service has different interfaces (for example a public facing service as well as an admin or support interface), you may want to divide your history up into different sections focused on each part of the service.
+If your service has different parts, for example a public facing service and an admin interface, you may want to divide your history into sections for each part.
 
 ## Set up a folder for each section
 
-You can group posts together into sections using folders
+You can group posts together into sections using folders:
 
-1. Create a subfolder for each section within the app/posts folder. Use dashes instead of spaces in the the folder names.
+1. Create a folder for each section in `app/posts`. Use dashes instead of spaces in the the folder names.
 
-2. Within each subfolder, create a JSON file, with the same name as the folder but ending in `.json`. For example, for the folder `app/posts/support-interface`, add the file `app/posts/support-interface/support-interface.json`.
+2. Create a `.json` file in each folder. Use the same name as the folder. For the folder `app/posts/support-interface`, the JSON file would be `app/posts/support-interface/support-interface.json`.
 
 3. This is a [directory data file](https://www.11ty.dev/docs/data-template-dir/), and it can be used to set the default values for all posts that sit within this folder.
 
@@ -31,7 +31,7 @@ You can group posts together into sections using folders
 
 Next, create a page that lists these related posts. You can do that by creating an index page.
 
-1. Within the `posts` folder, create a markdown file for each section. For example, for the folder `app/posts/support-interface/`, add the file `app/posts/support-interface.md`.
+1. In the `posts` folder, create a markdown `.md` file for each section. For the folder `app/posts/support-interface/`, add the file `app/posts/support-interface.md`.
 
 2. At the top of the markdown file for the section, add this front matter data:
 
