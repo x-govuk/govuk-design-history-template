@@ -9,4 +9,10 @@ pagination:
   size: 50
 posts:
   title: Getting started
+aside:
+  title: Support
+  content: |
+    This project is maintained by a small number of volunteers working across government.
+
+    For questions about using a design history for your service, bug reports or feedback, [submit a new issue](https://github.com/x-govuk/govuk-design-history/issues/new).
 ---

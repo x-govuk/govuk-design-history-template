@@ -18,6 +18,12 @@ This repository makes it easy to:
 
 Read our guide on how to [set up a design history](https://design-history.herokuapp.com/set-up-a-design-history/).
 
+## Support
+
+This project is maintained by a small number of volunteers working across government.
+
+For questions about using a design history for your service, bug reports or feedback, [submit a new issue](https://github.com/x-govuk/govuk-design-history/issues/new).
+
 ## Example design histories
 
 * [Becoming a teacher](https://bat-design-history.netlify.app)
