@@ -1,3 +1,6 @@
+---
+eleventyExcludeFromCollections: true
+---
 @import "govuk-frontend/govuk/base";
 @import "govuk-frontend/govuk/core/all";
 @import "../_components/all";

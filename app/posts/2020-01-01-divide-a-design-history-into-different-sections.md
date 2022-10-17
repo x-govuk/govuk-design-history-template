@@ -4,15 +4,15 @@ description: Learn how to divide your design history site into different section
 date: 2020-01-01
 ---
 
-If your service has different products (for example a public facing service as well as an admin or support interface), you may want to divide your history up into different sections focused on each part of the service.
+If your service has different parts, for example a public facing service and an admin interface, you may want to divide your history into sections for each part.
 
 ## Set up a folder for each section
 
-You can create a section by grouping related posts. You can do this in 2 ways; keeping posts in the same folder and giving them the same tag(s).
+You can group posts together into sections using folders:
 
-1. Create a subfolder within the app/posts folder
+1. Create a folder for each section in `app/posts`. Use dashes instead of spaces in the the folder names.
 
-2. Within this subfolder, create a JSON file, with the same name as the folder. For example, for the folder app/posts/support-interface, add the file app/posts/support-interface/support-interface.json
+2. Create a `.json` file in each folder. Use the same name as the folder. For the folder `app/posts/support-interface`, the JSON file would be `app/posts/support-interface/support-interface.json`.
 
 3. This is a [directory data file](https://www.11ty.dev/docs/data-template-dir/), and it can be used to set the default values for all posts that sit within this folder.
 
@@ -31,15 +31,14 @@ You can create a section by grouping related posts. You can do this in 2 ways; k
 
 Next, create a page that lists these related posts. You can do that by creating an index page.
 
-1. Within the subfolder created in the previous step, create a markdown file, with the same name as the folder. For example, for the folder app/posts/support-interface/, add the file app/posts/support-interface/support-interface.md
+1. In the `posts` folder, create a markdown `.md` file for each section. For the folder `app/posts/support-interface/`, add the file `app/posts/support-interface.md`.
 
-2. Add these values to the front matter:
+2. At the top of the markdown file for the section, add this front matter data:
 
    {% raw %}
 
    ```yaml
    ---
-   override:tags: []
    layout: collection
    title: Service support interface
    description: A tool for support agents to manage the service
@@ -48,21 +47,31 @@ Next, create a page that lists these related posts. You can do that by creating 
      reverse: true
      size: 50
    permalink: "support-interface/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}{% endif %}/"
-   eleventyComputed:
-     eleventyNavigation:
-       key: "{{ title }}"
-       excerpt: "{{ description }}"
-       parent: home
    ---
    ```
 
    {% endraw %}
 
+   The value for `pagination.data` should use the collection created by the tag you added to the JSON file for the section. This tells the index page which posts to list. For example, if your tag is `support-interface`, the value for `pagination.data` would be `collections.support-interface`.
+
    You do not need to add any body content, but if you do, this will appear above the list of posts in this section.
 
 ## Update the home page to link to each section
 
-Currently the homepage lists all posts on the site. To change it so that only sections are linked to instead:
+Currently the homepage lists all posts on the site. Change it so that only sections are linked to instead by removing these lines from `app/index.md`:
 
-1. Remove `pagination` from the front matter in `app/index.md`.
-2. Remove `eleventyComputed.eleventyNavigation.parent` from `app/posts/posts.json`
+   ```yaml
+   pagination:
+     data: collections.post
+     reverse: true
+     size: 50
+   posts:
+     title: Getting started
+   ```
+
+You can change the content of the heading on the homepage by adding these lines to `app/index.md`:
+
+   ```yaml
+   sections:
+     title: Services
+   ```
