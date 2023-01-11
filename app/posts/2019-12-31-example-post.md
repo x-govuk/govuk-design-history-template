@@ -24,13 +24,13 @@ Some real examples are:
 
 ## This page was generated
 
-After screenshots were saved to the `app/images/example-post` directory, [this page was generated](https://github.com/x-govuk/govuk-design-history/pull/11/commits/473f5aca5d978a3d18ac188b98c6c8ef6c000713) using the following command:
+After screenshots were saved to the `app/images/example-post` directory, [this page was generated](https://github.com/x-govuk/govuk-design-history-template/pull/11/commits/473f5aca5d978a3d18ac188b98c6c8ef6c000713) using the following command:
 
 ```bash
 node scripts/generate.js example-post
 ```
 
-[Read the guide on how to use this script](/generate-a-page-of-screenshots/#generate-a-page-of-screenshots-from-a-folder-of-images)
+[Read the guide on how to use this script](https://x-govuk.github.io/govuk-design-history/generate-a-page-of-screenshots/#generate-a-page-of-screenshots-from-a-folder-of-images)
 
 ## You can print this page
 
