@@ -20,7 +20,7 @@
     "@11ty/eleventy": "^1.0.2",
     "govuk-eleventy-plugin": "^3.0.3",
     "http-server": "^14.1.1",
-    "rimraf": "^3.0.2",
+    "rimraf": "^4.0.4",
     "sass": "^1.56.0"
   },
   "devDependencies": {
