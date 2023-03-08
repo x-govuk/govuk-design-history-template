@@ -1,7 +1,7 @@
 module.exports = function (eleventyConfig) {
   // Options to customise the appearance of your design history
   // https://x-govuk.github.io/govuk-eleventy-plugin/options/
-  eleventyConfig.addPlugin(require('govuk-eleventy-plugin'), {
+  eleventyConfig.addPlugin(require('@x-govuk/govuk-eleventy-plugin'), {
     stylesheets: [
       '/styles/application.css'
     ],
