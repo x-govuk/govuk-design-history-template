@@ -21,7 +21,7 @@
     "@x-govuk/govuk-eleventy-plugin": "^5.0.0",
     "http-server": "^14.1.1",
     "rimraf": "^4.4.1",
-    "sass": "^1.60.0"
+    "sass": "^1.61.0"
   },
   "devDependencies": {
     "standard": "^17.0.0",
