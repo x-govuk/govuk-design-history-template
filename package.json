@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@x-govuk/govuk-eleventy-plugin": "^5.0.1",
+    "@x-govuk/govuk-eleventy-plugin": "^5.0.2",
     "http-server": "^14.1.1",
     "rimraf": "^5.0.1",
     "sass": "^1.62.1"
