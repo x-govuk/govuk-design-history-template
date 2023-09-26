@@ -1,5 +1,4 @@
 {
   "layout": "post",
-  "permalink": "{{ page.filePathStem | replace('posts/', '') }}/",
-  "tags": ["post"]
+  "permalink": "{{ page.filePathStem | replace('posts/', '') }}/"
 }

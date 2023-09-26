@@ -1,1 +1,16 @@
 {% extends "layouts/tag.njk" %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/"
+      },
+      {
+        text: "Tags",
+        href: "/tags"
+      }
+    ]
+  }) }}
+{% endblock %}
