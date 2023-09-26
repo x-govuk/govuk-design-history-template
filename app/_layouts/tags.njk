@@ -3,7 +3,11 @@
   {{ govukBreadcrumbs({
     items: [
       {
-        text: "Home",
+        text: options.parentSite.name,
+        href: options.parentSite.url
+       } if options.parentSite,
+      {
+        text: options.homeKey,
         href: "/"
       }
     ]
