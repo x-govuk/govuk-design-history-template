@@ -69,7 +69,7 @@ function decoratePaths () {
   paths.forEach(item => {
     item.id = item.title.replace(/ +/g, '-').toLowerCase()
     item.file = `${imageDirectory}/${item.id}.png`
-    item.src = item.file.replace('app/assets', '/public')
+    item.src = item.file.replace('app/assets', '/_site')
   })
 }
 

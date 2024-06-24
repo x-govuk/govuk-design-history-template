@@ -7,13 +7,16 @@ module.exports = function (eleventyConfig) {
     ],
     headingPermalinks: true,
     header: {
-      organisationLogo: false,
+      logotype: false,
       productName: 'Design history',
       search: {
         indexPath: '/search.json',
         sitemapPath: '/sitemap'
       }
-    }
+    },
+    url:
+      process.env.GITHUB_ACTIONS &&
+      'https://x-govuk.github.io/govuk-design-history-template/'
   })
 
   // Passthrough
@@ -26,9 +29,9 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: 'njk',
     dir: {
       input: 'app',
-      output: 'public',
       layouts: '_layouts',
       includes: '_components'
-    }
+    },
+    pathPrefix: process.env.GITHUB_ACTIONS && '/govuk-design-history-template/'
   }
 }
