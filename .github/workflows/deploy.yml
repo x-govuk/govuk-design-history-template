@@ -27,6 +27,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          enablement: true # Enable GitHub Pages if it's not already
       - name: Install dependencies
         run: npm ci
       - name: Build with Eleventy
