@@ -4,8 +4,9 @@ description: This example was generated using a script and shows how to automati
 date: 2019-12-31
 screenshots:
   items:
-    - text: Design history index
+    - text: Example image title
       src: 01-design-history-index.png
+      alt: Example of how you can set alternative text. If you leave this off, the default alt text will be 'Screenshot of [image title]'.
       caption: |
         You can include captions with each image, and each caption can include markdown. This is a screenshot of the [index page](/).
     - text: Search results
