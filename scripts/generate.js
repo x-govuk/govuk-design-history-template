@@ -7,9 +7,8 @@
   node scripts/generate.js name-of-directory-holding-images
 */
 
-// Dependencies
-const fs = require('fs')
-const { DateTime } = require('luxon')
+import fs from 'node:fs'
+import { DateTime } from 'luxon'
 
 // Arguments
 const directoryName = process.argv.slice(-1)[0]
@@ -20,7 +19,7 @@ const deepestDirectory = directoryName.split('/').pop()
 let title = deepestDirectory.replace(/-/g, ' ')
 title = title.charAt(0).toUpperCase() + title.slice(1)
 
-const datestamp = DateTime.local().toFormat('yyyy-MM-dd')
+const dateStamp = DateTime.local().toFormat('yyyy-MM-dd')
 
 const imageDirectory = `app/images/${directoryName}`
 const postDirectory = `app/posts/${directoryName}`.replace('/' + deepestDirectory, '')
@@ -34,7 +33,7 @@ function start () {
   generatePage()
 }
 
-function warnIfNoArguments (title) {
+function warnIfNoArguments () {
   // TODO: Use a better check for an argument
   if (directoryName.startsWith('/Users')) {
     console.log('No arguments set')
@@ -73,7 +72,7 @@ function getExistingImages () {
 function generateFrontMatter (items) {
   return `---
   title: ${title}
-  date: ${datestamp}
+  date: ${dateStamp}
   screenshots:
     ${items}
 ---`
@@ -88,7 +87,7 @@ function generatePage () {
         src: ${item.src}`
   })
 
-  const filename = `${postDirectory}/${datestamp}-${deepestDirectory}.md`
+  const filename = `${postDirectory}/${dateStamp}-${deepestDirectory}.md`
 
   fs.writeFile(filename, generateFrontMatter(items), err => {
     if (err) {

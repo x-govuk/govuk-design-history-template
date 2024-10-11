@@ -14,16 +14,16 @@
     { title: 'Terms and conditions', path: '/terms-conditions'}
   ]
 */
+import { DateTime } from 'luxon'
+import { webshot } from 'webshot-node'
+import fs from 'fs-extra'
+
+// Settings
+const domain = 'http://localhost:3000'
 const paths = [{
   title: 'Index page',
   path: '/'
 }]
-const { DateTime } = require('luxon')
-const domain = 'http://localhost:3000'
-
-// Dependencies
-const webshot = require('webshot-node')
-const fs = require('fs-extra')
 
 // Arguments
 const directoryName = process.argv.slice(-1)[0]
@@ -34,7 +34,7 @@ const deepestDirectory = directoryName.split('/').pop()
 let title = deepestDirectory.replace(/-/g, ' ')
 title = title.charAt(0).toUpperCase() + title.slice(1)
 
-const datestamp = DateTime.local().toFormat('yyyy-MM-dd')
+const dateStamp = DateTime.local().toFormat('yyyy-MM-dd')
 
 const imageDirectory = `app/images/${directoryName}`
 const postDirectory = `app/posts/${directoryName}`.replace('/' + deepestDirectory, '')
@@ -47,7 +47,7 @@ function start () {
   takeScreenshots()
 }
 
-function warnIfNoArguments (title) {
+function warnIfNoArguments () {
   // TODO: Use a better check for an argument
   if (directoryName.startsWith('/Users')) {
     console.log('No arguments set')
@@ -89,7 +89,7 @@ function takeScreenshots () {
     }
   }
 
-  paths.forEach(function (item, index) {
+  paths.forEach(function (item) {
     webshot(
       domain + item.path,
       item.file,
@@ -104,7 +104,7 @@ function takeScreenshots () {
 function generateFrontMatter (items) {
   return `---
   title: ${title}
-  date: ${datestamp}
+  date: ${dateStamp}
   screenshots:
     ${items}
 ---`
@@ -118,7 +118,7 @@ function generatePage () {
       - text: "${item.title}"`
   })
 
-  const filename = `${postDirectory}/${datestamp}-${deepestDirectory}.md`
+  const filename = `${postDirectory}/${dateStamp}-${deepestDirectory}.md`
 
   fs.writeFile(filename, generateFrontMatter(items), err => {
     if (err) {
