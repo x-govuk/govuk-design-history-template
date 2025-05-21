@@ -1,3 +1,5 @@
+@use "pkg:govuk-frontend/dist/govuk" as *;
+
 .app-email {
   border: $govuk-border-width solid $govuk-border-colour;
   padding: govuk-spacing(4);
@@ -5,9 +7,9 @@
   max-width: 40rem;
 
   h1, h2, h3, h4 {
+    margin-bottom: govuk-spacing(4);
     @include govuk-font-size($size: 27);
     @include govuk-typography-weight-bold;
-    margin-bottom: govuk-spacing(4);
   }
 }
 

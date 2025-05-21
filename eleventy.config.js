@@ -1,4 +1,4 @@
-import govukEleventyPlugin from '@x-govuk/govuk-eleventy-plugin'
+import { govukEleventyPlugin } from '@x-govuk/govuk-eleventy-plugin'
 
 export default function (eleventyConfig) {
   // Options to customise the appearance of your design history
@@ -9,7 +9,6 @@ export default function (eleventyConfig) {
     ],
     headingPermalinks: true,
     header: {
-      logotype: false,
       productName: 'Design history',
       search: {
         indexPath: '/search.json',

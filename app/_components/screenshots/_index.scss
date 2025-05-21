@@ -1,3 +1,5 @@
+@use "pkg:govuk-frontend/dist/govuk" as *;
+
 .app-screenshots__contents,
 .app-screenshots__screenshot {
   margin-bottom: govuk-spacing(9);
