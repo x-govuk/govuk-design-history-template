@@ -9,7 +9,7 @@ export default function (eleventyConfig) {
     ],
     headingPermalinks: true,
     header: {
-      productName: 'Design history',
+      productName: 'Design History',
       search: {
         indexPath: '/search.json',
         sitemapPath: '/sitemap'
