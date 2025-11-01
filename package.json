@@ -9,8 +9,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "prebuild": "rimraf _site",
     "build": "eleventy",
+    "prestart": "npm run build",
     "start": "eleventy --serve --quiet",
     "preserve": "npm run build",
     "serve": "http-server ./_site",
@@ -20,7 +20,6 @@
     "@11ty/eleventy": "^3.0.0",
     "@x-govuk/govuk-eleventy-plugin": "^8.0.2",
     "http-server": "^14.1.1",
-    "rimraf": "^6.0.0",
     "sass": "^1.80.5"
   },
   "devDependencies": {

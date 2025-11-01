@@ -1,3 +1,5 @@
+import fs from 'node:fs/promises'
+
 import { govukEleventyPlugin } from '@x-govuk/govuk-eleventy-plugin'
 
 export default function (eleventyConfig) {
@@ -26,6 +28,16 @@ export default function (eleventyConfig) {
 
   // Passthrough
   eleventyConfig.addPassthroughCopy({ './app/images': '.' })
+
+  // Reset contents of output directory before each build
+  eleventyConfig.on('eleventy.before', async ({ directories, runMode }) => {
+    if (runMode === 'build') {
+      await fs.rm(directories.output, {
+        force: true,
+        recursive: true
+      })
+    }
+  })
 
   // Config
   return {
