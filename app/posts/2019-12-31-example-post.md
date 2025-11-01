@@ -33,7 +33,7 @@ After screenshots were saved to the `app/images/example-post` directory, [this p
 node scripts/generate.js example-post
 ```
 
-[Read the guide on how to use this script](https://x-govuk.github.io/govuk-design-history/generate-a-page-of-screenshots/#generate-a-page-of-screenshots-from-a-folder-of-images)
+[Read the guide on how to use this script](https://govuk-design-history.x-govuk.org/generate-a-page-of-screenshots/#generate-a-page-of-screenshots-from-a-folder-of-images)
 
 ## You can print this page
 

@@ -2,7 +2,7 @@ import { govukEleventyPlugin } from '@x-govuk/govuk-eleventy-plugin'
 
 export default function (eleventyConfig) {
   // Options to customise the appearance of your design history
-  // https://x-govuk.github.io/govuk-eleventy-plugin/options/
+  // https://govuk-eleventy-plugin.x-govuk.org/get-started/options/
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     header: {
       productName: 'Design History',
@@ -21,7 +21,7 @@ export default function (eleventyConfig) {
     },
     url:
       process.env.GITHUB_ACTIONS &&
-      'https://x-govuk.github.io/govuk-design-history-template/'
+      'https://x-govuk.org/govuk-design-history-template/'
   })
 
   // Passthrough
