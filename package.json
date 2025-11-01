@@ -19,8 +19,7 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@x-govuk/govuk-eleventy-plugin": "^8.0.2",
-    "http-server": "^14.1.1",
-    "sass": "^1.80.5"
+    "http-server": "^14.1.1"
   },
   "devDependencies": {
     "standard": "^17.1.0",
