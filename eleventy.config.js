@@ -13,7 +13,9 @@ export default function (eleventyConfig) {
         sitemapPath: '/sitemap'
       }
     },
-    headingPermalinks: true,
+    markdown: {
+      headingPermalinks: true,
+    },
     stylesheets: [
       '/styles/application.css'
     ],
