@@ -17,13 +17,13 @@
     "test": "standard"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@x-govuk/govuk-eleventy-plugin": "^8.3.0",
+    "@11ty/eleventy": "^3.1.5",
+    "@x-govuk/govuk-eleventy-plugin": "^9.0.1",
     "http-server": "^14.1.1"
   },
   "devDependencies": {
-    "standard": "^17.1.0",
-    "webshot-node": "^0.18.2"
+    "standard": "^17.1.2",
+    "webshot-node": "^0.18.3"
   },
   "private": true,
   "engines": {
