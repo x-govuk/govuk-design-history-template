@@ -28,8 +28,10 @@ export default function (eleventyConfig) {
       'https://x-govuk.org/govuk-design-history-template/'
   })
 
-  // Passthrough
-  eleventyConfig.addPassthroughCopy({ './app/images': '.' })
+  // Include post images and documents in the generated site
+  eleventyConfig.addPassthroughCopy(
+    './app/posts/**/*.{gif,GIF,jpg,JPG,jpeg,JPEG,png,PNG,pdf,PDF,svg,SVG,webp,WEBP}'
+  )
 
   // Reset contents of output directory before each build
   eleventyConfig.on('eleventy.before', async ({ directories, runMode }) => {
