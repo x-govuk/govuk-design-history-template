@@ -25,15 +25,9 @@ Some real examples are:
 - [Manage teacher applications: Deferring an application](https://becoming-a-teacher.design-history.education.gov.uk/manage-teacher-training-applications/deferring-applications-to-the-next-cycle/)
 - [Find postgraduate teacher training: A snapshot of the service](https://becoming-a-teacher.design-history.education.gov.uk/find-teacher-training/find-december-2019/)
 
-## This page was generated
+## Screenshots
 
-After screenshots were saved to the `app/images/example-post` directory, [this page was generated](https://github.com/x-govuk/govuk-design-history-template/pull/11/commits/473f5aca5d978a3d18ac188b98c6c8ef6c000713) using the following command:
-
-```bash
-node scripts/generate.js example-post
-```
-
-[Read the guide on how to use this script](https://govuk-design-history.x-govuk.org/generate-a-page-of-screenshots/#generate-a-page-of-screenshots-from-a-folder-of-images)
+The screenshots for this post are stored alongside it in `app/posts/example-post`.
 
 ## You can print this page
 
