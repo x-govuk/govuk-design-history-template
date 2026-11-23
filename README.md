@@ -14,6 +14,8 @@ This repository makes it easy to:
 
 ## Installation and getting started
 
+You need Node.js 26.13.0 or later.
+
 Read our guide on how to [set up a design history](https://govuk-design-history.x-govuk.org/get-started/).
 
 ## Support
